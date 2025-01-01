@@ -24,6 +24,11 @@ mark {
     margin: auto;
     padding: 20px;
     white-space: pre; 
+    perspective: 5px; 
+}
+
+.parallax-layer {
+    position: absolute;
 }
 
 .welcome {
@@ -45,4 +50,5 @@ mark {
 
 .quote {
     grid-area: quote;
+    transform: translateZ(-2px);
 }

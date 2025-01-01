@@ -6,56 +6,35 @@ body {
     color: #fff;
 }
 
-#grid-layout {
+#welcome {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Flexible columns */
-    grid-auto-rows: minmax(100px, auto); /* Flexible rows */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr;
+    grid-template-areas:    "welcome    portrait"
+                            "tags       portrait"
+                            "bio        quote";
     gap: 15px;
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    box-sizing: border-box;
 }
 
-/* Grid items */
-.grid-item {
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Utility classes for stretching components */
 .welcome {
-    grid-column: span 2; /* Default span for the heading */
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: left;
+    grid-area: welcome;
 }
 
-.left-text {
-    grid-column: 1 / 2;
-    grid-row-end: span 2;
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 15px;
-    border-radius: 8px;
+.tags {
+    grid-area: tags;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .heading {
-        grid-column: span 1; /* Adjust heading to fit smaller screens */
-    }
-    .bio {
-        grid-column: span 1; /* Adjust bio section */
-    }
+.portrait {
+    grid-area: portrait;
 }
 
-@media (max-width: 480px) {
-    .bio {
-        grid-column: span 1; /* Bio spans a single column on small screens */
-    }
+.bio {
+    grid-area: bio;
+}
+
+.quote {
+    grid-area: quote;
 }

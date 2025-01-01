@@ -15,13 +15,14 @@ body {
                             "bio        quote";
     gap: 15px;
     max-width: 800px;
+    height: 600px;
     margin: auto;
     padding: 20px;
 }
 
 .welcome {
     grid-area: welcome;
-    font-size: 3rem;
+    font-size: 75px;
 }
 
 .tags {

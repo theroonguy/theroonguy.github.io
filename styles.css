@@ -8,7 +8,7 @@ body {
 
 mark {
     background-color: orange;
-    padding: 4px;
+    padding: 2px;
     color: white;
     corner-radius: 3px;
 }
@@ -28,6 +28,7 @@ mark {
     padding: 20px;
     white-space: pre; 
     perspective: 5px; 
+    height: 100vh;
 }
 
 .parallax-layer {

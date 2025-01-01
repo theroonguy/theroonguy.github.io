@@ -8,10 +8,10 @@ body {
 
 #grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    grid-template-columns: repeat(5, 1fr); /* Flexible columns */
     grid-auto-rows: minmax(100px, auto); /* Flexible rows */
     gap: 15px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
@@ -28,20 +28,18 @@ body {
 }
 
 /* Utility classes for stretching components */
-.heading {
+.welcome {
     grid-column: span 2; /* Default span for the heading */
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    background-color: #555;
 }
 
-.bio {
-    grid-column: span 3; /* Bio spans across 3 columns by default */
+.left-text {
+    grid-column: span 1; /* Bio spans across 3 columns by default */
     text-align: left;
     font-size: 1rem;
     line-height: 1.5;
     padding: 15px;
-    background-color: #555;
     border-radius: 8px;
 }
 
@@ -51,7 +49,7 @@ body {
         grid-column: span 1; /* Adjust heading to fit smaller screens */
     }
     .bio {
-        grid-column: span 2; /* Adjust bio section */
+        grid-column: span 1; /* Adjust bio section */
     }
 }
 

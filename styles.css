@@ -31,10 +31,12 @@ body {
     grid-column: span 2; /* Default span for the heading */
     font-size: 2rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .left-text {
-    grid-column: span 1; /* Bio spans across 3 columns by default */
+    grid-column: 1 / 2
+    grid-row-end: span 2;
     text-align: left;
     font-size: 1rem;
     line-height: 1.5;

@@ -21,6 +21,7 @@ body {
 
 .welcome {
     grid-area: welcome;
+    font-size: 3rem;
 }
 
 .tags {

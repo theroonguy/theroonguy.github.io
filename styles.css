@@ -8,6 +8,9 @@ body {
 
 mark {
     background-color: orange;
+    padding: 4px;
+    color: white;
+    corner-radius: 3px;
 }
 
 #welcome {

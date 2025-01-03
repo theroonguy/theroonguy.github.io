@@ -68,7 +68,7 @@ section.large {
     text-wrap: initial;
     padding: 20px;
 
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr 0.5fr 2fr 0.1fr;
     grid-template-areas: "welcome   welcome"
                         "tags    tags"
@@ -79,7 +79,7 @@ section.large {
 
 .welcome {
     grid-area: welcome;
-    font-size: 90px;
+    font-size: 17vw;
     white-space: nowrap;
 }
 

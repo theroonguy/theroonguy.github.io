@@ -68,10 +68,10 @@ section.large {
     text-wrap: initial;
     padding: 20px;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.5fr 2fr 0.1fr;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 0.4fr 0.5fr 0.5fr 0.1fr;
     grid-template-areas: "welcome   welcome"
-                        "tags    tags"
+                        "tags    portrait"
                         "bio        portrait"
                         "bio        quote";
     height: 800px;
@@ -92,14 +92,14 @@ section.large {
     object-fit: cover;
     object-position: 70% 30%;
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin: auto;
-    margin-top: -40px;
+    /* margin-block: -10%; */
 }
 
 .bio {
     grid-area: bio;
-    margin-top: 40%;
+    margin-top: -40%;
 }
 
 .quote {

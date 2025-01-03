@@ -26,7 +26,8 @@ window.addEventListener('scroll', function () {
         const maxBlur = 10;
         // Map distance to blur amount
         const blurAmount = Math.min((distanceFromCenter / winHeight) * maxBlur, maxBlur);
+
         // Apply the blur effect
-        element.style.filter = `blur(${blurAmount}px)`;
+        element.style.filter = `blur(${blurAmount - 1}px)`;
     });
 });

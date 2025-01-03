@@ -120,6 +120,7 @@ section.large {
 
     .welcome {
         white-space: nowrap;
+        font-size: 90px;
     }
 
     .portrait {

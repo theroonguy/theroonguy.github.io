@@ -6,6 +6,10 @@
 }
 
 /* General layout */
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
     margin: 0;
     background-color: var(--bg-color);
@@ -182,3 +186,5 @@ section.slideshow img {
     margin: 20px;
     aspect-ratio: 21/9;
 }
+
+/* Stagger */

@@ -26,6 +26,7 @@ mark {
     padding-inline: 3px;
     color: white;
     border-radius: 3px;
+    font-weight: 700;
 }
 
 h1 {
@@ -228,4 +229,16 @@ section.gallery img {
     padding: 5px;
     right: 20px;
     transform: translateY(-140px);
+}
+
+/* Footer */
+
+#footer {
+    background-color: #272727;
+    border-radius: 10px;
+    margin-block: 40px;
+}
+
+#footer div {
+    padding: 0px;
 }

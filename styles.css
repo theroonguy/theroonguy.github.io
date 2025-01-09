@@ -56,11 +56,14 @@ a {
 }
 
 .middle {
+    width: calc(100vw - 40px);
     max-width: 800px;
     margin: auto;
 }
 
+
 section.large {
+    width: calc(100vw - 80px);
     max-width: 1200px;
     margin: auto;
 }
@@ -170,7 +173,7 @@ section.blog p {
 @media (min-width: 800px) {
     #welcome {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 2fr 4fr;
         grid-template-areas:    "welcome    portrait"
                                 "tags       portrait"
                                 "bio        portrait"
@@ -200,8 +203,9 @@ section.blog p {
 .columns {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    /* gap: 20px; */
+    column-gap: 20px;
+    /* padding: 20px; */
     /* padding-block: 40px; */
 
 }
@@ -220,7 +224,6 @@ section.blog p {
 } */
 
 @media (min-width: 1000px) {
-
 
     .columns {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

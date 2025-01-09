@@ -20,9 +20,14 @@ function parallax_low() {
     parallax_low.forEach((element) => {
         distanceFromCenter = distFromCenter(element);
         const maxTranslate = 100; // Maximum translateY value
-        const translateY = Math.max(Math.min(distanceFromCenter * -0.1, maxTranslate), -maxTranslate);
+        if (isMobile()) {
+            const translateY = Math.max(Math.min(distanceFromCenter * -0.05, maxTranslate), -maxTranslate);
+            element.style.transform = 'translateY(' + translateY + 'px)';
+        } else {
+            const translateY = Math.max(Math.min(distanceFromCenter * -0.1, maxTranslate), -maxTranslate);
+            element.style.transform = 'translateY(' + translateY + 'px)';
+        };
 
-        element.style.transform = 'translateY(' + translateY + 'px)';
     });
 }
 
@@ -35,9 +40,15 @@ function parallax_high() {
     parallax_high.forEach((element) => {
         distanceFromCenter = distFromCenter(element);
         const maxTranslate = 100; // Maximum translateY value
-        const translateY = Math.max(Math.min(distanceFromCenter * 0.1, maxTranslate), -maxTranslate);
-
-        element.style.transform = 'translateY(' + translateY + 'px)';
+        if (isMobile()) {
+            const translateY = Math.max(Math.min(distanceFromCenter * 0.05, maxTranslate), -maxTranslate);
+            element.style.transform = 'translateY(' + translateY + 'px)';
+        } else {
+            const translateY = Math.max(Math.min(distanceFromCenter * 0.1, maxTranslate), -maxTranslate);
+            element.style.transform = 'translateY(' + translateY + 'px)';
+        };
+        
+        
     });
 }
 

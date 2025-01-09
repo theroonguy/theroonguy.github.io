@@ -156,7 +156,6 @@ section.blog p {
     width: 100%;
     height: 90%;
     /* margin: 0 auto; */
-    overflow: hidden;
 
 }
 
@@ -171,24 +170,25 @@ section.blog p {
 
 @media (min-width: 800px) {
     #welcome {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 4fr;
+        grid-template-columns: 1.6fr 1fr;
+        grid-template-rows: 6.5fr 1fr 5fr 1fr;
         grid-template-areas:    "welcome    portrait"
                                 "tags       portrait"
                                 "bio        portrait"
                                 "bio        quote";
         height: 500px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     .welcome {
         white-space: nowrap;
         font-size: 90px;
+        overflow: hidden;
     }
 
     .portrait {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         margin: auto;
     }
 

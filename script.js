@@ -1,3 +1,7 @@
+function isMobile() {
+    return window.innerWidth <= 768; // Adjust breakpoint as needed
+}
+
 function distFromCenter(element) {
     const winHeight = window.innerHeight;
     const rect = element.getBoundingClientRect(); // Get element's position
@@ -43,16 +47,22 @@ function blur_on_scroll() {
     // BLUR EFFECT FOR ELEMENTS WITH CLASS 'blur'
     const blurElements = document.querySelectorAll('.blur');
 
-    blurElements.forEach((element) => {
-        const distanceFromCenter = distFromCenter(element);
-        // Maximum blur value (e.g., 10px)
-        const maxBlur = 10;
-        // Map distance to blur amount
-        const blurAmount = Math.min((distanceFromCenter / winHeight) * maxBlur, maxBlur);
-
-        // Apply the blur effect
-        element.style.filter = `blur(${blurAmount - 1}px)`;
-    });
+    if (isMobile()) {
+        blurElements.forEach(div => div.style.filter = 'none');
+    } else {
+        blurElements.forEach((element) => {
+        
+            const distanceFromCenter = distFromCenter(element);
+            // Maximum blur value (e.g., 10px)
+            const maxBlur = 10;
+            // Map distance to blur amount
+            const blurAmount = Math.min((distanceFromCenter / winHeight) * maxBlur, maxBlur);
+    
+            // Apply the blur effect
+            element.style.filter = `blur(${blurAmount - 1}px)`;
+        });
+    }
+    
 }
 
 // function enlarge_when_centered() {
@@ -74,4 +84,10 @@ window.addEventListener('scroll', function () {
     parallax_high();
     blur_on_scroll();
     // enlarge_when_centered();
+});
+
+fetch('/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML('afterbegin', data);
 });

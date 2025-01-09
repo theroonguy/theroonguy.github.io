@@ -34,6 +34,7 @@ h1 {
     font-weight: 300;
     font-style: normal;
     margin: 0;
+    font-size: 4rem;
 }
 
 a {
@@ -54,7 +55,7 @@ a {
     border-radius: 5px;
 }
 
-section.middle {
+.middle {
     max-width: 800px;
     margin: auto;
 }
@@ -64,32 +65,74 @@ section.large {
     margin: auto;
 }
 
+section.blog {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+section.blog p {
+    line-height: 140%;
+}
+
 /* Header */
 #header {
+    position: fixed;
     height: auto;
     font-size: 1.3rem;
-    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#header nav {
+    padding: 15px;
+}
+
+#header nav a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-right: 20px;
+    transition: 0.3s ease;
+}
+
+#header nav a:hover {
+    color: var(--light-accent);
+}
+
+#header .line {
+    width: 100vw;
 }
 
 .line {
     border: solid 1px var(--light-accent);
+    width: 100%;
+    overflow: hidden;
 }
 
 
 /* Welcome */
 #welcome {
     display: grid;
-    white-space: pre; 
-    text-wrap: initial;
+    /* white-space: pre;  */
+    /* text-wrap: initial; */
     padding: 20px;
 
-    grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 0.4fr 0.2fr 0.5fr 0.1fr;
-    grid-template-areas: "welcome   welcome"
-                        "tags    portrait"
-                        "bio        portrait"
-                        "bio        quote";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 3fr 0.5fr 1fr;
+    grid-template-areas: 
+                        "welcome   welcome"
+                        "tags    tags"
+                        "portrait        portrait"
+                        "quote        quote"
+                        "bio    bio"
+                        ;
     height: 800px;
+    gap: 20px;
+    
 
 }
 
@@ -107,14 +150,17 @@ section.large {
 .portrait {
     grid-area: portrait;
     object-fit: cover;
-    object-position: 70% 30%;
+    object-position: 90% 20%;
     width: 100%;
     height: 90%;
-    margin: auto;
+    /* margin: 0 auto; */
+    overflow: hidden;
+
 }
 
 .bio {
     grid-area: bio;
+
 }
 
 .quote {
@@ -154,22 +200,24 @@ section.large {
 .columns {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 40px;
-    padding-block: 40px;
+    gap: 20px;
+    padding: 20px;
+    /* padding-block: 40px; */
 
 }
 
 .columns img {
-    max-width: 60vw;
+    max-width: 80vw;
     max-height: 40vw;
     object-fit: cover;
     object-position: 50% 90%;
+    margin: auto;
     /* aspect-ratio: 21 / 9; */
 }
 
-.columns div {
+/* .columns div {
     padding: 40px;
-}
+} */
 
 @media (min-width: 1000px) {
 
@@ -229,6 +277,7 @@ section.gallery img {
     padding: 5px;
     right: 20px;
     transform: translateY(-140px);
+    z-index: -1;
 }
 
 /* Footer */

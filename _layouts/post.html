@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="blog">
+    <h1>{{ page.title }}</h1>
+    <p>
+        {%- if page.tags -%}
+            {% for tag in page.tags %}
+                <a class="tags" href="{{site.baseurl}}/node/#{{tag | slugize}}">
+                    #{{ tag }}
+                </a>
+            {% endfor %}
+        {%- endif -%}
+        <br>
+        Last edited: {{ page.date | date: "%B %-d, %Y"}}     
+    </p>   
+    <div class="line"></div><br> 
+    {{ content }}
+</section>

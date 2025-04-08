@@ -1,3 +1,8 @@
 exclude:
   - .vscode/
   - .github/
+
+collections:
+  nodes:
+    output: true
+    permalink: /node/:path

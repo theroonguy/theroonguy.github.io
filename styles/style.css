@@ -322,7 +322,7 @@ section.gallery img {
     margin: 0 auto;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
 
     #footer {
         padding: 5em;

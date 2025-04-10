@@ -93,6 +93,25 @@ section.blog p, section.blog ul, section.blog ol {
     line-height: 140%;
 }
 
+div.blog_image {
+    float: right;
+    justify-content: right;
+    margin-bottom: 0;
+    object-fit: cover;
+    max-width: 50%;
+    padding: 1em;
+}
+
+div.blog_image img {
+    width: 100%;
+}
+
+div.blog_image p {
+    font-size: 0.85em;
+    margin-top: 0;
+    text-align: right;
+}
+
 a.tags {
     text-decoration: none;
     font-size: 0.8em;
@@ -102,10 +121,20 @@ a.tags:hover {
     text-decoration:underline;
 }
 
+#in_progress {
+    padding: 1em;
+    font-size: 0.9em;
+    background-color: rgb(223, 162, 49);
+    border-radius: 5px;
+    border: #4b3909 1px solid;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin: 1.5em;
+}
+
 /* Header */
 #header {
-    position: fixed;
-    height: auto;
+    /* position: fixed; */
+    /* height: auto; */
     font-size: 1.3rem;
     background-color: var(--bg-color);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);

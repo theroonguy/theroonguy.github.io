@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "My nodal network"
+title: "My blog"
 date: 2025-04-08
 ---
 
-Welcome to my blog! Kind of. Here, you'll find my random writings from my life, hobbies, stories, and other various thoughts, stored in what I'll call **nodes**. Why nodes? Well, the way I see it, standard blogs are treated as entries, inextricably linked to the date and time of its writing. What if, instead, my writings *lived* with me, connected by topic and relation rather than by chronology?
+Yes, I have a blog. I know, very exciting. Here, you'll find my random writings from my life, hobbies, stories, and other various thoughts. Enjoy your stay!
 
-I'm just that unique.
-
-<a href="/node/by_tag">See all nodes, sorted by tag.</a>
+<a href="/node/by_tag">See all logs, sorted by tag.</a>

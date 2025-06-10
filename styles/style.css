@@ -94,12 +94,21 @@ section.blog p, section.blog ul, section.blog ol {
 }
 
 div.blog_image {
-    float: right;
-    justify-content: right;
     margin-bottom: 0;
     object-fit: cover;
     max-width: 50%;
-    padding: 1em;
+}
+
+div.blog_image.right {
+    float: right;
+    justify-content: right;
+    padding-left: 1em;
+}
+
+div.blog_image.left {
+    float: left;
+    justify-content: left;
+    padding-right: 1em;
 }
 
 div.blog_image img {
@@ -109,7 +118,6 @@ div.blog_image img {
 div.blog_image p {
     font-size: 0.85em;
     margin-top: 0;
-    text-align: right;
 }
 
 a.tags {

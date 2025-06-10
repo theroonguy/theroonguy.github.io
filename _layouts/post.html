@@ -8,7 +8,7 @@ layout: default
         Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
         {%- if page.tags -%}
             {% for tag in page.tags %}
-                <a class="tags" href="{{site.baseurl}}/node/#{{tag | slugize}}">
+                <a class="tags" href="{{site.baseurl}}/node/by_tag#{{tag | slugize}}">
                     #{{ tag }}
                 </a>&nbsp;
             {% endfor %}

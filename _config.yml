@@ -1,6 +1,9 @@
 exclude:
   - .vscode/
   - .github/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 collections:
   nodes:

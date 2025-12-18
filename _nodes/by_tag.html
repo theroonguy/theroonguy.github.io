@@ -35,11 +35,11 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 {% endfor %}
 
 {% for tag in tags %}
-	<h3>{{ tag | capitalize | replace: '_', ' '}}</h3>
+	<h3 style="text-transform: capitalize;">{{ tag | capitalize | replace: '_', ' '}}</h3>
 	<ul>
   	{% for post in site.nodes %}
     	{% if post.tags contains tag %}
-			<li><a href="{{ post.url }}">{{ post.title | capitalize }}</a></li>
+      <li><a href="{{ post.url }}">{{ post.title | capitalize }}</a> | {{ post.date | date: "%b %d %y" }}</li>
     	{% endif%}
   	{% endfor %}
 	</ul>

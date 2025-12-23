@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section class="blog">
-    <h1>{{ page.title }}</h1>
-    <p>
+    <h1 class="retro">{{ page.title }}</h1>
+    <p class="retro">
         Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
         {%- if page.tags -%}
             {% for tag in page.tags %}
@@ -15,5 +15,7 @@ layout: default
         {%- endif -%}    
     </p>   
     <div class="line"></div><br> 
-    {{ content }}
+    <div class="content">
+      {{ content }}
+    </div>
 </section>

@@ -1,8 +1,10 @@
 /* Variables */
 :root {
-    --bg-color: #333;
+    /* --bg-color: #333; */
+    --bg-color: #555;
     --light-accent: rgb(243, 200, 122);
     --strong-accent: rgb(202, 144, 36);
+    --border-radius: 0px;
 }
 
 /* General layout */
@@ -14,11 +16,14 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: #fff;
-    font-family: "Bitter", serif;
+    /* font-family: "Bitter", serif; */
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.3rem;
     font-weight: 300;
     font-optical-sizing: auto;
     z-index: 1;
     overflow-x: hidden;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1), black 180%);
 }
 
 /* Utility Classes */
@@ -26,7 +31,7 @@ mark {
     background-color: var(--strong-accent);
     padding-inline: 3px;
     color: white;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     font-weight: 700;
 }
 
@@ -36,6 +41,12 @@ h1 {
     font-style: normal;
     margin: 0;
     font-size: 4rem;
+}
+
+h1.retro {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 5rem;
+  font-style: normal;
 }
 
 a {
@@ -51,9 +62,38 @@ a {
     z-index: 5;
 }
 
+.retro {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  /* text-shadow: 0 0 2px #C8C8C8; */
+}
+
 .simple-border {
-    border: solid white 2px;
-    border-radius: 5px;
+    /* border: solid white 3px; */
+    /* border-radius: var(--border-radius); */
+  background: 
+    linear-gradient(#292929 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right top, #5e1b02, #bd6e00) border-box;
+  border-radius: var(--border-radius);
+  border: solid transparent 3px;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-box {
+  height: fit-content;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 0;
+  background: 
+    linear-gradient(#292929 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right top, #eb4a00, #ffb01c) border-box;
+  border-radius: var(--border-radius);
+  border: solid transparent 3px;
 }
 
 .middle {
@@ -61,7 +101,6 @@ a {
     max-width: 800px;
     margin: auto;
 }
-
 
 section.large {
     width: calc(100vw - 80px);
@@ -84,13 +123,18 @@ section.display {
 
 section.blog img {
     /* margin-block: 20px; */
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 section.blog p, section.blog ul, section.blog ol {
     margin: 20px auto;
     max-width: 800px;
     line-height: 140%;
+}
+
+section.blog .content {
+  font-family: "Bitter", serif;
+  font-size: 1rem;
 }
 
 div.blog_image {
@@ -133,7 +177,7 @@ a.tags:hover {
     padding: 1em;
     font-size: 0.9em;
     background-color: rgb(223, 162, 49);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     border: #4b3909 1px solid;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     margin: 1.5em;
@@ -143,7 +187,7 @@ a.tags:hover {
 #header {
     /* position: fixed; */
     /* height: auto; */
-    font-size: 1.3rem;
+    font-size: 1.3em;
     background-color: var(--bg-color);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -157,7 +201,7 @@ a.tags:hover {
 #header nav a {
     text-decoration: none;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1em;
     margin-right: 20px;
     transition: 0.3s ease;
 }
@@ -222,7 +266,7 @@ a.tags:hover {
 
 .bio {
     grid-area: bio;
-
+    align-self: center;
 }
 
 .quote {
@@ -232,12 +276,12 @@ a.tags:hover {
 @media (min-width: 800px) {
     #welcome {
         grid-template-columns: 1.6fr 1fr;
-        grid-template-rows: 6.5fr 1fr 5fr 1fr;
+        grid-template-rows: 5.5fr 1fr 5fr 1fr;
         grid-template-areas:    "welcome    portrait"
                                 "tags       portrait"
                                 "bio        portrait"
                                 "bio        quote";
-        height: 500px;
+        height: 600px;
         margin-bottom: 60px;
     }
 
@@ -248,7 +292,7 @@ a.tags:hover {
     }
 
     .portrait {
-        width: 90%;
+        width: 100%;
         height: 90%;
         margin: auto;
     }
@@ -267,7 +311,6 @@ a.tags:hover {
     column-gap: 20px;
     /* padding: 20px; */
     /* padding-block: 40px; */
-
 }
 
 .columns img {
@@ -287,6 +330,7 @@ a.tags:hover {
 
     .columns {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        align-items: center;
     }
 
     .columns img {
@@ -328,7 +372,7 @@ section.gallery img {
     object-fit: cover;
     border: solid white 2px;
     aspect-ratio: 1 / 1;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 /* Info Box */
@@ -337,7 +381,7 @@ section.gallery img {
     position: absolute; /* Allows absolute positioning for the hover state */
     background-color: rgb(80, 80, 80);
     border: solid rgb(124, 124, 124);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px;
     right: 20px;
     transform: translateY(-140px);
@@ -348,7 +392,7 @@ section.gallery img {
 
 #footer {
     background-color: #272727;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     padding: 3em;
     font-size: 0.9em;
 }

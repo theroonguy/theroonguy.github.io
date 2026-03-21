@@ -1,0 +1,18 @@
+<div class="yt-music" data-video-id="{{ include.video_id }}">
+  <div class="yt-music__controls" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+    <button type="button" class="yt-music__play simple-border retro" style="width: 100%">Play</button>
+    <button type="button" class="yt-music__pause simple-border retro" style="width: 100%" disabled>Pause</button>
+  </div>
+
+  <div class="yt-music__bottom">
+    <div>
+      <label class="yt-music__volume">
+        <input class="yt-music__slider" type="range" min="0" max="100" value="50" step="1" disabled>
+        <span class="yt-music__value" aria-live="polite">50%</span>
+      </label>
+    </div>
+    <div class="yt-music__player"></div>
+  </div>
+
+  
+</div>

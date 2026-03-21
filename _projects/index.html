@@ -1,0 +1,23 @@
+---
+layout: post 
+title: Projects 
+---
+
+<h2>Current Projects</h2>
+
+{% for project in site.projects reversed %}
+  {% if project.status == "current" %}
+  <p>
+  ({{ project.date | date: "%D" }}) <mark><a href={{ project.url }}>{{ project.title }}</a></mark>: {{ project.description }} </p>
+  {% endif %}
+{% endfor %}
+
+<div class="line"></div>
+<h2>Completed Projects</h2>
+
+{% for project in site.projects reversed %}
+  {% if project.status == "completed" %}
+  <p>
+  ({{ project.date | date: "%D" }}) <mark><a href={{ project.url }}>{{ project.title }}</a></mark>: {{ project.description }} </p>
+  {% endif %}
+{% endfor %}

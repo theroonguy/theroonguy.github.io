@@ -8,4 +8,7 @@ exclude:
 collections:
   nodes:
     output: true
-    permalink: /node/:path
+    permalink: /nodes/:path
+  projects:
+    output: true
+    permalink: /projects/:path

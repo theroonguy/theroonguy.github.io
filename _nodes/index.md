@@ -15,7 +15,7 @@ Of course, I didn't know how to actually use a mind palace. I sat on that bench 
 
 So, here we are. Am I naming this a "Garth" because it sounds silly? Probably. Definitely. But like every joke, there's a shred of sincerity embedded within. Have a look around, and enjoy what bits and pieces of my life you want to.
 
-<a href="/node/by_tag">See all logs, sorted by tag.</a>
+<a href="/nodes/by_tag">See all logs, sorted by tag.</a>
 
 <div class="line"></div>
 {% for node in site.nodes reversed %}

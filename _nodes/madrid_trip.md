@@ -47,6 +47,7 @@ Toledo was my next stop.
 <img src="/img/madrid_trip/toledo/alley.jpg" class="lightboxable">
 <img src="/img/madrid_trip/toledo/street_1.jpg" class="lightboxable">
 <img src="/img/madrid_trip/toledo/street_2.jpg" class="lightboxable">
+<img src="/img/madrid_trip/toledo/overview.jpg" class="lightboxable">
 <img src="/img/madrid_trip/toledo/cathedral_outside.jpg" class="lightboxable">
 <img src="/img/madrid_trip/toledo/cathedral_inside.jpg" class="lightboxable">
 <img src="/img/madrid_trip/toledo/cathedral_hallway.jpg" class="lightboxable">

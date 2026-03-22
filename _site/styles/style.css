@@ -10,6 +10,7 @@
 /* General layout */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -111,11 +112,17 @@ section.large {
 
 section.blog {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0px auto;
     background-color: #272727;
     padding: 20px;
     border-radius: 20px;
     overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+    section.blog {
+      margin: 20px auto;
+    }
 }
 
 section.display {
@@ -413,6 +420,21 @@ section.gallery img {
   width: 100%;
   writing-mode: vertical-rl;
   direction: rtl;
+}
+
+@media (max-width: 800px) {
+  .yt-music {
+    top: auto;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    width: calc(100% - 40px);
+  }
+
+  .yt-music__slider {
+    writing-mode: horizontal-tb;
+    direction: ltr;
+  }
 }
 
 /* Lightbox */

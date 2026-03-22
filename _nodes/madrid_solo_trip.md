@@ -64,7 +64,7 @@ I discovered this artist, Night Tapes, just two days before my trip while I was 
 </iframe>
 </div>
 
-{% include youtube_music.html video_id="Uk7JItajmF0" %}
+{% include youtube_music.html video_id="nCiJ8MMQCxM" %}
 
 My last day, I went to El Escorial. I thought all the schoolkids out front, playing ball and chatting, were there on a field trip, until they disappeared inside a secondary entrance meant for the school built into the complex. I realized then that the museum would tour through just a fraction of this immense monastery, palace, pantheon, and college all built as one.
 

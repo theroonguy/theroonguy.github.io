@@ -22,7 +22,6 @@
 
   document.addEventListener('click', (e) => {
     const img = e.target.closest('img.lightboxable');
-    console.log('Opening lightbox for');
     if (!img) return;
     const full = img.src;
     openLightbox(full, img.alt);

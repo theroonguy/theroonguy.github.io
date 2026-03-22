@@ -406,21 +406,32 @@ section.gallery img {
 /* Music Player */
 
 .yt-music {
-  position: fixed;
+  /*position: fixed;
   top: 200px;
   right: calc(50vw - 670px);
+  overflow: hidden;*/
   background-color: rgb(30,30,30);
   border-radius: var(--border-radius);
   border: solid rgb(80, 80, 80) 2px;
   padding: 10px;
-  width: 200px;
+  width: 350px;
+  margin-bottom: 20px;
   overflow: hidden;
+  height: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 }
 
 .yt-music__bottom {
   display: grid;
   grid-template-columns: auto auto;
   gap: 0.5rem;
+}
+
+.yt-music__controls {
+  display: grid;
+  gap: 0.25rem;
 }
 
 .yt-music__controls button {
@@ -437,23 +448,31 @@ section.gallery img {
 }
 
 .yt-music__slider {
-  width: 100%;
+  width: 20px;
   writing-mode: vertical-rl;
   direction: rtl;
+  height: 120px;
+}
+
+.yt-music__header {
+  padding-bottom: 5px;
 }
 
 @media (max-width: 800px) {
   .yt-music {
+    position: fixed;
     top: auto;
-    height: 60px;
+    height: 90px;
     bottom: 10px;
     right: 10px;
     width: calc(100% - 40px);
   }
 
   .yt-music__slider {
-    writing-mode: horizontal-tb;
-    direction: ltr;
+    /*writing-mode: horizontal-tb;
+    direction: ltr;*/
+    width: auto;
+    height: 90px;
   }
 }
 

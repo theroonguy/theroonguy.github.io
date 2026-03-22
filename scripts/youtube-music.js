@@ -30,7 +30,7 @@
       // Create player on first interaction (faster pages + avoids some autoplay-policy quirks)
       function ensurePlayer() {
         if (player) return;
-
+        console.log('Creating YouTube player for video ID:', videoId);
         player = new YT.Player(playerHost, {
           width: '100%',
           height: '160',              // small "music bar" footprint; increase if you want the full UI
@@ -62,6 +62,7 @@
       playBtn.addEventListener('click', () => {
         ensurePlayer();
         pendingPlay = true;
+        console.log('Play button clicked, pendingPlay set to true');
         // After user gesture, safe to play and set volume.
         // If onReady hasn't fired yet, the onReady handler will still set volume to the slider value.
         if (player && player.playVideo) player.playVideo();

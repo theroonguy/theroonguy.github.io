@@ -3,6 +3,8 @@ layout: post
 title: "Madrid Trip"
 tags: [travel]
 date: [2026-03-22]
+music_link: Uk7JItajmF0
+music_title: "storm - Night Tapes"
 ---
 
 {% include in_progress.html %}
@@ -12,6 +14,8 @@ date: [2026-03-22]
 <img src="/img/madrid_trip/royal_palace_night.jpg" style="width: 100%; height: 40vh; object-fit: cover;" class="simple-border">
 
 Madrid: My first solo trip. I arrived on a Tuesday and had a warm welcome from my friends who were respectively studying there and visiting. We exchanged thoughts about our new lives in Sweden and Spain on a hill as the last of the light shone on the Royal Palace, occasionally listening to a group of Spaniards happily singing and laughing together. They managed to find a tapas bar I could eat at. They weren't joking about how much pork there is in Spain.
+
+Click on the images to see the full picture!
 
 <section class="gallery">
 <img src="/img/madrid_trip/royal_palace_night.jpg" class="lightboxable">
@@ -71,7 +75,6 @@ I discovered this artist, Night Tapes, just two days before my trip while I was 
 </iframe>
 </div>
 
-{% include youtube_music.html video_id="Uk7JItajmF0" %}
 
 My last day, I went to El Escorial. I thought all the schoolkids out front, playing ball and chatting, were there on a field trip, until they disappeared inside a secondary entrance meant for the school built into the complex. I realized then that the museum would tour through just a fraction of this immense monastery, palace, pantheon, and college all built as one.
 

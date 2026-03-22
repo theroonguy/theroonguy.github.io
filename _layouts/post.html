@@ -3,17 +3,24 @@ layout: default
 ---
 
 <section class="blog">
-    <h1 class="retro">{{ page.title }}</h1>
-    <p class="retro">
-        Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
-        {%- if page.tags -%}
-            {% for tag in page.tags %}
-                <a class="tags" href="{{site.baseurl}}/node/by_tag#{{tag | slugize}}">
-                    #{{ tag }}
-                </a>&nbsp;
-            {% endfor %}
-        {%- endif -%}    
-    </p>   
+  <div style="display: flex; gap: 1em;">
+    <div>
+      <h1 class="retro">{{ page.title }}</h1>
+      <p class="retro">
+          Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
+          {%- if page.tags -%}
+              {% for tag in page.tags %}
+                  <a class="tags" href="{{site.baseurl}}/node/by_tag#{{tag | slugize}}">
+                      #{{ tag }}
+                  </a>&nbsp;
+              {% endfor %}
+          {%- endif -%}    
+      </p>   
+    </div>
+    {%- if page.music_link -%}
+      {% include youtube_music.html video_id=page.music_link music_title=page.music_title %}
+    {%- endif -%}
+  </div>
     <div class="line"></div><br> 
     <div class="content">
       {{ content }}

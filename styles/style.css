@@ -466,6 +466,7 @@ section.gallery img {
     bottom: -10px;
     right: 10px;
     width: calc(100% - 40px);
+    grid-template-columns: 1fr 1fr;
   }
 
   .yt-music__controls {

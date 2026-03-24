@@ -13,9 +13,9 @@ music_title: "storm - Night Tapes"
 
 <img src="/img/madrid_trip/royal_palace_night.jpg" style="width: 100%; height: 40vh; object-fit: cover;" class="simple-border">
 
-Madrid: My first solo trip. I arrived on a Tuesday and had a warm welcome from my friends who were respectively studying there and visiting. We exchanged thoughts about our new lives in Sweden and Spain on a hill as the last of the light shone on the Royal Palace, occasionally listening to a group of Spaniards happily singing and laughing together. They managed to find a tapas bar I could eat at. They weren't joking about how much pork there is in Spain.
-
 Click on the images to see the full picture!
+
+Madrid: My first solo trip. I arrived on a Tuesday and had a warm welcome from my friends who were respectively studying there and visiting. We exchanged thoughts about our new lives in Sweden and Spain on a hill as the last of the light shone on the Royal Palace, occasionally listening to a group of Spaniards happily singing and laughing together. They managed to find a tapas bar I could eat at. They weren't joking about how much pork there is in Spain.
 
 <section class="gallery">
 <img src="/img/madrid_trip/royal_palace_night.jpg" class="lightboxable">

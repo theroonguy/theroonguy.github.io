@@ -7,10 +7,6 @@ music_link: Uk7JItajmF0
 music_title: "storm - Night Tapes"
 ---
 
-{% include in_progress.html %}
-
-
-
 <img src="/img/madrid_trip/royal_palace_night.jpg" style="width: 100%; height: 40vh; object-fit: cover;" class="simple-border">
 
 Click on the images to see the full picture!

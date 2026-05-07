@@ -3,6 +3,8 @@ layout: post
 title: "Ven Trip"
 tags: [travel, sweden]
 date: [2026-05-06]
+music_link: a6mv9CSUIWE
+music_title: "Humming Bird - Foxtrails"
 ---
 
 <section class="gallery">
@@ -11,8 +13,6 @@ date: [2026-05-06]
 <img src="/img/ven_trip/port.jpg" class="lightboxable">
 <img src="/img/ven_trip/port_2.jpg" class="lightboxable">
 </section>
-
-<br>
 
 <img src="/img/ven_trip/hill.gif" class="lightboxable simple-border">
 <img src="/img/ven_trip/coast.gif" class="lightboxable simple-border">

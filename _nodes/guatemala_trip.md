@@ -3,6 +3,8 @@ layout: post
 title: "Guatemala Trip"
 tags: [travel]
 date: [2024-12-29]
+music_link: 0iMwRlpbkBY
+music_title: "Roma Fade - Andrew Bird"
 ---
 
 <section class="gallery">

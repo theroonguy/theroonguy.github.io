@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Portugal Trip"
+title: "Portugal 2024"
 tags: [travel]
 date: [2024-12-29]
+music_link: KpwSV1QBd8M
+music_title: "El lugar correcto - Natalia Lafourcade"
 ---
 
 <section class="gallery">

@@ -14,27 +14,14 @@ date: [2026-05-06]
 
 <br>
 
-<video width="100%" height="auto" autoplay loop muted class="simple-border">
-  <source src="/img/ven_trip/hill.mp4" type="video/mp4" />
-  your browser does not support the video tag.
-</video>
-
-<video width="100%" height="auto" autoplay loop muted class="simple-border">
-  <source src="/img/ven_trip/coast.mp4" type="video/mp4" />
-  your browser does not support the video tag.
-</video>
+<img src="/img/ven_trip/hill.gif" class="lightboxable simple-border">
+<img src="/img/ven_trip/coast.gif" class="lightboxable simple-border">
 
 <img src="/img/ven_trip/group_pic2.jpg" class="lightboxable simple-border">
 
-<video width="100%" height="auto" autoplay loop muted class="simple-border">
-  <source src="/img/ven_trip/petting_sheep.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<img src="/img/ven_trip/petting_sheep.gif" class="lightboxable simple-border">
 
-<video width="100%" height="auto" autoplay loop muted class="simple-border">
-  <source src="/img/ven_trip/lighthouse.mp4" type="video/mp4" />
-  your browser does not support the video tag.
-</video>
+<img src="/img/ven_trip/lighthouse.gif" class="lightboxable simple-border">
 
 <section class="gallery">
 <img src="/img/ven_trip/group_pic.jpg" class="lightboxable">

@@ -15,6 +15,10 @@ music_title: "El lugar correcto - Natalia Lafourcade"
 <img src="/img/portugal_trip/misty_trees.JPG" class="lightboxable">
 <img src="/img/portugal_trip/mountains.JPG" class="lightboxable">
 <img src="/img/portugal_trip/strolling.JPG" class="lightboxable">
+<img src="/img/portugal_trip/boats.JPG" class="lightboxable">
+<img src="/img/portugal_trip/hiking.JPG" class="lightboxable">
+<img src="/img/portugal_trip/pointing.JPG" class="lightboxable">
+<img src="/img/portugal_trip/waves.JPG" class="lightboxable">
 </section>
 
 

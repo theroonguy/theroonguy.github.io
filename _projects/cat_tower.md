@@ -5,6 +5,7 @@ tags: [woodworking, CAD, design]
 status: completed 
 date: 2026-07-13
 description: "A 6 feet tall, multilayered wooden cat tower furniture piece."
+thumbnail: "/img/cat_tower/cat_tower_wide.jpg"
 ---
 
 <img src="/img/cat_tower/cat_tower_wide.jpg" class="lightboxable">

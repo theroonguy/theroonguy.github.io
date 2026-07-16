@@ -1,0 +1,15 @@
+<div class="project-card">
+  {% if project.thumbnail %}
+    <div class="project-card-thumb-wrap">
+      <img src="{{ project.thumbnail }}" alt="{{ project.title }} thumbnail" class="project-card-thumb" />
+      <div class="project-card-thumb-bands"></div>
+    </div>
+  {% endif %}
+  <div class="project-card-header">
+    {% if project.status == "completed" %}
+      <span class="project-card-date">({{ project.date | date: "%D" }})</span>
+    {% endif %}
+    <mark><a href="{{ project.url }}">{{ project.title }}</a></mark>
+  </div>
+  <div class="project-card-desc">{{ project.description }}</div>
+</div>

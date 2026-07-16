@@ -3,21 +3,24 @@ layout: post
 title: Projects 
 ---
 
-<h2>Current Projects</h2>
 
-{% for project in site.projects reversed %}
+{% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+
+<h2>Current Projects</h2>
+<div class="project-card-grid">
+{% for project in sorted_projects %}
   {% if project.status == "current" %}
-  <p>
-  ({{ project.date | date: "%D" }}) <mark><a href={{ project.url }}>{{ project.title }}</a></mark>: {{ project.description }} </p>
+    {% include project-card.html project=project %}
   {% endif %}
 {% endfor %}
+</div>
 
 <div class="line"></div>
 <h2>Completed Projects</h2>
-
-{% for project in site.projects reversed %}
+<div class="project-card-grid">
+{% for project in sorted_projects %}
   {% if project.status == "completed" %}
-  <p>
-  ({{ project.date | date: "%D" }}) <mark><a href={{ project.url }}>{{ project.title }}</a></mark>: {{ project.description }} </p>
+    {% include project-card.html project=project %}
   {% endif %}
 {% endfor %}
+</div>

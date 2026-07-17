@@ -12,9 +12,10 @@ The following part extracts all the tags from your posts and sort tags, so that 
 =======================
 {% endcomment %}
 {% assign rawtags = "" %}
-{% for post in site.nodes %}
-	{% assign ttags = post.tags | join:'|' | append:'|' %}
-	{% assign rawtags = rawtags | append:ttags %}
+{% assign all_posts = site.nodes | concat: site.projects %}
+{% for post in all_posts %}
+    {% assign ttags = post.tags | join:'|' | append:'|' %}
+    {% assign rawtags = rawtags | append:ttags %}
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
 
@@ -36,12 +37,12 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 {% endfor %}
 
 {% for tag in tags %}
-	<h3 style="text-transform: capitalize;">{{ tag | capitalize | replace: '_', ' '}}</h3>
-	<ul>
-  	{% for post in site.nodes %}
-    	{% if post.tags contains tag %}
-      <li><a href="{{ post.url }}">{{ post.title | capitalize }}</a> | {{ post.date | date: "%b %d %y" }}</li>
-    	{% endif%}
-  	{% endfor %}
-	</ul>
+  <h3 style="text-transform: capitalize;">{{ tag | capitalize | replace: '_', ' '}}</h3>
+  <ul>
+    {% for post in all_posts %}
+      {% if post.tags contains tag %}
+        <li><a href="{{ post.url }}">{{ post.title | capitalize }}</a> | {{ post.date | date: "%b %d %y" }}</li>
+      {% endif%}
+    {% endfor %}
+  </ul>
 {% endfor%}

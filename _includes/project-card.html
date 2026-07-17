@@ -1,4 +1,4 @@
-<div class="project-card">
+<div class="project-card" data-tags="{{ project.tags | join: ',' }}">
   {% if project.thumbnail %}
     <div class="project-card-thumb-wrap">
       <img src="{{ project.thumbnail }}" alt="{{ project.title }} thumbnail" class="project-card-thumb" />
@@ -11,5 +11,12 @@
     {% endif %}
     <mark><a href="{{ project.url }}">{{ project.title }}</a></mark>
   </div>
+  {% if project.tags and project.tags.size > 0 %}
+    <div class="project-card-tags">
+      {% for tag in project.tags %}
+        <a class="tags" href="{{site.baseurl}}/nodes/by_tag#{{tag | slugize}}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
   <div class="project-card-desc">{{ project.description }}</div>
 </div>

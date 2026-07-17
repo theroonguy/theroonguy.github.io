@@ -570,7 +570,7 @@ img.lightboxable {
   display: flex;
   align-items: center;
   gap: 0.7em;
-  margin: -2.5em 0.5em 0.5em 0.5em;
+  margin: -2.5em 0.5em 0.2em 0.5em;
   z-index: 1;
 }
 
@@ -585,6 +585,11 @@ img.lightboxable {
   font-size: 1.08em;
   color: #f7e7c7;
   line-height: 1.35;
+  z-index: 1;
+}
+
+.project-card-tags {
+  margin-left: 0.5em;
   z-index: 1;
 }
 

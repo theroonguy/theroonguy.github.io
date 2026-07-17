@@ -41,32 +41,103 @@
     <div class="content">
       
 
+
+
+
+
+
+
+<label for="tag-filter"><strong>Filter by tag:</strong></label>
+<select id="tag-filter">
+  <option value="all">All</option>
+  
+    <option value="CAD">Cad</option>
+  
+    <option value="design">Design</option>
+  
+    <option value="game_development">Game development</option>
+  
+    <option value="minecraft">Minecraft</option>
+  
+    <option value="music_production">Music production</option>
+  
+    <option value="social">Social</option>
+  
+    <option value="travel">Travel</option>
+  
+    <option value="videography">Videography</option>
+  
+    <option value="web_devlopment">Web devlopment</option>
+  
+    <option value="woodworking">Woodworking</option>
+  
+</select>
+
 <h2>Current Projects</h2>
 <div class="project-card-grid">
 
   
 
   
-    <div class="project-card">
-  
-  <div class="project-card-header">
-    
-    <mark><a href="/projects/my_website">My Website</a></mark>
-  </div>
-  <div class="project-card-desc">This website, built from scratch to showcase my projects, writings, and experience.</div>
-</div>
-
-  
-
-  
-    <div class="project-card">
+    <div class="project-card" data-tags="game_development">
   
   <div class="project-card-header">
     
     <mark><a href="/projects/tracerouter">Tracerouter</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#game_development">#game_development</a>
+      
+    </div>
+  
   <div class="project-card-desc">A fast, momentum-paced 3D parkour game set in a digital world being corrupted by a virus. (1st place UMD Game Jam Fall 2025)</div>
 </div>
+
+  
+
+  
+    <div class="project-card" data-tags="game_development,minecraft,social">
+  
+  <div class="project-card-header">
+    
+    <mark><a href="/projects/skyways_smp">Skyways SMP</a></mark>
+  </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#game_development">#game_development</a>
+      
+        <a class="tags" href="/nodes/by_tag#minecraft">#minecraft</a>
+      
+        <a class="tags" href="/nodes/by_tag#social">#social</a>
+      
+    </div>
+  
+  <div class="project-card-desc">A custom Modded Minecraft SMP server with over 250 hand-picked mods and a unique community quest.</div>
+</div>
+
+  
+
+  
+    <div class="project-card" data-tags="web_devlopment">
+  
+  <div class="project-card-header">
+    
+    <mark><a href="/projects/my_website">My Website</a></mark>
+  </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#web_devlopment">#web_devlopment</a>
+      
+    </div>
+  
+  <div class="project-card-desc">This website, built from scratch to showcase my projects, writings, and experience.</div>
+</div>
+
+  
 
   
 
@@ -93,7 +164,9 @@
   
 
   
-    <div class="project-card">
+
+  
+    <div class="project-card" data-tags="woodworking,CAD,design">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/cat_tower/cat_tower_wide.jpg" alt="Cat Tower thumbnail" class="project-card-thumb" />
@@ -106,13 +179,24 @@
     
     <mark><a href="/projects/cat_tower">Cat Tower</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#woodworking">#woodworking</a>
+      
+        <a class="tags" href="/nodes/by_tag#CAD">#CAD</a>
+      
+        <a class="tags" href="/nodes/by_tag#design">#design</a>
+      
+    </div>
+  
   <div class="project-card-desc">A 6 feet tall, multilayered wooden cat tower furniture piece.</div>
 </div>
 
   
 
   
-    <div class="project-card">
+    <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/minor_illusion.png" alt="Minor Illusion thumbnail" class="project-card-thumb" />
@@ -125,13 +209,48 @@
     
     <mark><a href="/projects/minor_illusion">Minor Illusion</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#game_development">#game_development</a>
+      
+    </div>
+  
   <div class="project-card-desc">A tower defense game with only 1 tower and a whole lotta mirrors. (Micro Jam: Symmetry)</div>
 </div>
 
   
 
   
-    <div class="project-card">
+    <div class="project-card" data-tags="videography,travel">
+  
+    <div class="project-card-thumb-wrap">
+      <img src="/img/iceland_video_title.png" alt="Iceland Trip Video thumbnail" class="project-card-thumb" />
+      <div class="project-card-thumb-bands"></div>
+    </div>
+  
+  <div class="project-card-header">
+    
+      <span class="project-card-date">(03/31/26)</span>
+    
+    <mark><a href="/projects/iceland_trip_video">Iceland Trip Video</a></mark>
+  </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#videography">#videography</a>
+      
+        <a class="tags" href="/nodes/by_tag#travel">#travel</a>
+      
+    </div>
+  
+  <div class="project-card-desc">A video I captured and edited of my study abroad trip to Iceland.</div>
+</div>
+
+  
+
+  
+    <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/tracerouter_jam_lowres.png" alt="Tracerouter (Game Jam) thumbnail" class="project-card-thumb" />
@@ -144,13 +263,20 @@
     
     <mark><a href="/projects/tracerouter_game_jam">Tracerouter (Game Jam)</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#game_development">#game_development</a>
+      
+    </div>
+  
   <div class="project-card-desc">A fast, momentum-paced 3D parkour game set in a digital world being corrupted by a virus. (1st place UMD Game Jam Fall 2025)</div>
 </div>
 
   
 
   
-    <div class="project-card">
+    <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/devils_draw_lowres.png" alt="Devil's Draw thumbnail" class="project-card-thumb" />
@@ -163,13 +289,20 @@
     
     <mark><a href="/projects/devils_draw">Devil's Draw</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#game_development">#game_development</a>
+      
+    </div>
+  
   <div class="project-card-desc">A timed card game against the Devil that utilizes dying as a mechanic to increase the time limit and chain attacks. (1st place UMD Game Jam Spring 2025)</div>
 </div>
 
   
 
   
-    <div class="project-card">
+    <div class="project-card" data-tags="music_production">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/music/the_ferry_lowres.jpg" alt="The Ferry thumbnail" class="project-card-thumb" />
@@ -182,12 +315,66 @@
     
     <mark><a href="/projects/the_ferry">The Ferry</a></mark>
   </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#music_production">#music_production</a>
+      
+    </div>
+  
   <div class="project-card-desc">A 6-track electronica EP that evolved with my experiences during the Pandemic and my transition out of high school.</div>
 </div>
 
   
 
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var select = document.getElementById('tag-filter');
+  var cards = document.querySelectorAll('.project-card');
+
+  // Helper to filter cards
+  function filterCards(selected) {
+    cards.forEach(function(card) {
+      if (selected === 'all') {
+        card.style.display = '';
+      } else {
+        var tags = card.getAttribute('data-tags');
+        if (tags && tags.split(',').includes(selected)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  // On dropdown change, update URL and filter
+  select.addEventListener('change', function() {
+    var selected = this.value;
+    var url = new URL(window.location);
+    if (selected === 'all') {
+      url.searchParams.delete('tag');
+    } else {
+      url.searchParams.set('tag', selected);
+    }
+    window.history.replaceState({}, '', url);
+    filterCards(selected);
+  });
+
+  // On page load, check for tag param
+  var params = new URLSearchParams(window.location.search);
+  var tag = params.get('tag');
+  if (tag) {
+    select.value = tag;
+    filterCards(tag);
+  } else {
+    filterCards('all');
+  }
+});
+</script>
 
     </div>
 </section>

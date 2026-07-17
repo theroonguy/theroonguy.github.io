@@ -3,8 +3,33 @@ layout: post
 title: Projects 
 ---
 
+{% assign all_tags = "" %}
+{% for project in site.projects %}
+  {% assign ttags = project.tags | join:'|' | append:'|' %}
+  {% assign all_tags = all_tags | append:ttags %}
+{% endfor %}
+{% assign all_tags = all_tags | split:'|' | sort %}
+{% assign tags = "" %}
+{% for tag in all_tags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
 
 {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+
+<label for="tag-filter"><strong>Filter by tag:</strong></label>
+<select id="tag-filter">
+  <option value="all">All</option>
+  {% for tag in tags %}
+    <option value="{{ tag }}">{{ tag | capitalize | replace: '_', ' ' }}</option>
+  {% endfor %}
+</select>
 
 <h2>Current Projects</h2>
 <div class="project-card-grid">
@@ -24,3 +49,50 @@ title: Projects
   {% endif %}
 {% endfor %}
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var select = document.getElementById('tag-filter');
+  var cards = document.querySelectorAll('.project-card');
+
+  // Helper to filter cards
+  function filterCards(selected) {
+    cards.forEach(function(card) {
+      if (selected === 'all') {
+        card.style.display = '';
+      } else {
+        var tags = card.getAttribute('data-tags');
+        if (tags && tags.split(',').includes(selected)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  // On dropdown change, update URL and filter
+  select.addEventListener('change', function() {
+    var selected = this.value;
+    var url = new URL(window.location);
+    if (selected === 'all') {
+      url.searchParams.delete('tag');
+    } else {
+      url.searchParams.set('tag', selected);
+    }
+    window.history.replaceState({}, '', url);
+    filterCards(selected);
+  });
+
+  // On page load, check for tag param
+  var params = new URLSearchParams(window.location.search);
+  var tag = params.get('tag');
+  if (tag) {
+    select.value = tag;
+    filterCards(tag);
+  } else {
+    filterCards('all');
+  }
+});
+</script>

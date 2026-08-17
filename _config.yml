@@ -12,3 +12,12 @@ collections:
   projects:
     output: true
     permalink: /projects/:path
+  journal:
+    output: true
+    permalink: /journal/:path
+  writings:
+    output: true
+    permalink: /writing/:path
+  guides:
+    output: true
+    permalink: /guide/:path

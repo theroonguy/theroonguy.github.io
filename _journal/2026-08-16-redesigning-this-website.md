@@ -2,6 +2,11 @@
 layout: post
 ---
 
+<div class="blog_image right">
+    <img src="/img/home-page-2026.png" style="width:100%">
+    <p>The current home page of my personal website.</p>
+</div>
+
 My website is in a bit of an identity crisis. 
 
 It doesn't know whether it's a personal website or a professional one. It doesn't know if it should be retro-stylized corner-of-the-internet or a sleek and minimalistic portfolio archive. If it should house refined essays and reflections or stream-of-consciousness ideas. And it certainly doesn't know if it should be viewed on iPhones. 
@@ -36,8 +41,16 @@ While I do really appreciate the retro aesthetic of all these Neocities websites
     <p>Iconic russian constructivist poster.</p>
 </div>
 
-Taking after these styles, here's a quick half-done mockup of what my home page could look like:
+Taking after these styles, here's a quick half-done mockup I've just made in *Figma* of what my home page could look like:
 
 <img src="/img/figma-constructivist-home-page.png" style="width: 40%">
 
-The current website looks like this: <img src="/img/home-page-2026.png" style="width:100%">
+<br><br>
+
+---
+
+After spending some time learning how to make masks and geometric shapes with CSS, here is what I've come up with so far: 
+
+<img src="/img/Screenshot 2026-08-16 235106.png" style="width: 100%">
+
+While it's not fully fleshed out, I feel like it already comes off as a much more unique and interesting website. I designed the previous version of the home page nearly 2 years ago, and since then the oversized "Hi, I'm Haroon" header has aged like milk in the days of vibe-coded websites (even though I didn't use AI for it). I already like the split down the middle that separates the white background---the more traditional colors and professional categories like "projects" and "engineering"---from the dark, more zany (I'm looking into the future, here) side of my website, with dithered photos and angled buttons. Once I detail this page with more links, widgets and shapes, I think this home page will stand out and present the 2 different, yet still coherent, sides of myself.

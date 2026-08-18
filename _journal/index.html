@@ -5,6 +5,6 @@ title: Journals
 
 <ul>
 {% for journal in site.journal %}
-    <li><a href="{{ journal.url }}">{{ journal.title }}</a><br></li>
+    <li>{{ journal.date | date: "%B %-d, %Y"}} | <a href="{{ journal.url }}">{{ journal.title }}</a><br></li>
 {% endfor %}
 </ul>

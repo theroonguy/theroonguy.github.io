@@ -555,6 +555,15 @@ section.writings #mid_shelf {
 .journal a {
     font-weight: 800;
     background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c);
+    
     background-clip: text;
     color: transparent;
+    transition: 2s ease;
+    
+    display: inline-block;
+}
+
+.journal a:hover {
+    background-position-x: 200px;
+    transform: translateY(-4px);
 }

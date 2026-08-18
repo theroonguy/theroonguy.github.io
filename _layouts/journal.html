@@ -1,0 +1,25 @@
+---
+layout: new_default
+---
+
+<div class="journal_background">
+</div>
+
+<div class="journal">
+    <a class="back" href="/nodes/writings"><< BACK</a>
+    <h1>{{ page.title }}</h1>
+    <p class="retro">
+        Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
+        {%- if page.tags -%}
+            {% for tag in page.tags %}
+                <a class="tags" href="{{site.baseurl}}/nodes/by_tag#{{tag | slugize}}">
+                    #{{ tag }}
+                </a>&nbsp;
+            {% endfor %}
+        {%- endif -%}    
+    </p>  
+    <hr>
+    <div class="content">
+        {{ content }}
+    </div>
+</div>

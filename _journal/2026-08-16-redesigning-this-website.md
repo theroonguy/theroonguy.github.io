@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: journal
+date: 2026-08-16
+tags: [web development]
 ---
 
 <div class="blog_image right">

@@ -1,0 +1,10 @@
+---
+layout: journal
+title: Journals
+---
+
+<ul>
+{% for journal in site.journal %}
+    <li><a href="{{ journal.url }}">{{ journal.title }}</a><br></li>
+{% endfor %}
+</ul>

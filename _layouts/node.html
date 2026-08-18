@@ -5,8 +5,8 @@ layout: new_default
 <div class="journal_background">
 </div>
 
-<div class="journal">
-    <a class="back" href="/nodes/journals"><< BACK</a>
+<section class="node">
+    <a class="back" href="{{ page.back }}"><< BACK</a>
     <h1>{{ page.title }}</h1>
     <p class="retro">
         Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
@@ -22,4 +22,4 @@ layout: new_default
     <div class="content">
         {{ content }}
     </div>
-</div>
+</section>

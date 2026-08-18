@@ -1,0 +1,15 @@
+---
+layout: node
+title: Journals
+back: "/nodes/writings"
+---
+
+{% assign sorted_journals = site.journal | sort: 'date' | reverse %}
+
+<div class="journal_list" style="display: grid;">
+{% for journal in sorted_journals %}
+    <a class="journal_bar" href="{{ journal.url }}">
+        {{ journal.date | date: "%B %-d, %Y"}} | {{ journal.title }}
+    </a>
+{% endfor %}
+</div>

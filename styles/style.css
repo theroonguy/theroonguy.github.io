@@ -173,7 +173,7 @@ div.blog_image p {
     margin-top: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
     section.blog {
       margin: 0px auto;
       padding: 10px;

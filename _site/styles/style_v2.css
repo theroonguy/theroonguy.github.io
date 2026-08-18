@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-family: Bruno Ace;
+}
+
 body:after {
   content: "";
   background-color: transparent;
@@ -122,7 +126,7 @@ section.new_homepage h1 {
 }
 
 section.new_homepage #bio {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: Bitter;
   font-weight: 400;
   position: absolute;
@@ -552,7 +556,7 @@ section.writings #mid_shelf {
     font-family: Bruno Ace;
 }
 
-.journal a {
+a.inline, .journal a {
     font-weight: 800;
     background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c);
     
@@ -563,7 +567,45 @@ section.writings #mid_shelf {
     display: inline-block;
 }
 
-.journal a:hover {
+a.inline:hover, .journal a:hover {
     background-position-x: 200px;
     transform: translateY(-4px);
+    text-decoration: underline;
+}
+
+/* Journals Page */
+
+a.journal_bar {
+    width: 100%;
+    background-clip: unset;
+    background: none;
+    background-color: #cfdcff;
+    color: var(--background);
+    border-bottom: 2px solid var(--background);
+    border-left: 2px solid var(--background);
+    font-weight: 400;
+    margin: 5px;
+    padding: 5px;
+    transform: translateX(-10px);
+    transition: 0.5s ease;
+}
+
+a.journal_bar:hover {
+    transform: translateX(-60px);
+    padding: 5px 5px 5px 10px;
+    background-color: #8cfdf9;
+}
+
+/* Nodes */
+
+section.node {
+    background-color: var(--paper);
+    max-width: 700px;
+    margin: 50px auto;
+    font-family: Bitter;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 30px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
 }

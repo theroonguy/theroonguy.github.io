@@ -1,5 +1,6 @@
 ---
 layout: journal
+tags: [web development]
 ---
 
 <div class="blog_image"><img src="/img/journal/webcore_aesthetic.png"></div>

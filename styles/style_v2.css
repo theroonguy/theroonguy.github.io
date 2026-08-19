@@ -543,15 +543,17 @@ section.writings #mid_shelf {
 }
 
 .journal {
-    background-color: var(--paper);
-    max-width: 700px;
-    margin: 50px auto;
-    font-family: Bitter;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 30px;
-    border-top-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+  background-color: var(--paper);
+  max-width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-inline: auto;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
 }
 
 .journal h1 {
@@ -579,6 +581,73 @@ a.inline:hover, .journal a:hover {
     background-position-x: 200px;
     transform: translateY(-4px);
     text-decoration: underline;
+}
+
+.prev_journal {
+  position:absolute;
+  background-color: var(--paper);
+  max-width: 700px;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  height: 6vh;
+  border-top-right-radius: 60px;
+  transition: 0.3s ease;
+  border-top: 10px solid #819096;
+  display: flex;
+  align-items: center;
+}
+
+.prev_journal:hover {
+  transform: translateY(-3vh)
+  scale(1.1);
+  border-top: 10px solid #819096;
+  padding-bottom: 16vh;
+}
+
+.prev_journal h2, .next_journal h2 {
+  font-family: Bruno Ace;
+  font-size: 1.4rem;
+  width: clamp(100px, 40vw);
+  font-weight: 400;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.prev_journal p, .next_journal p {
+  margin-left: 30px;
+  margin-top: 24px;
+}
+
+.next_journal {
+  position: absolute;
+  background-color: var(--paper);
+  max-width: 700px;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  height: min(2vh, 10px);
+  border-bottom-left-radius: 60px;
+  transition: 0.3s ease;
+  border-bottom: 10px solid #819096;
+  display: flex;
+  align-items: center;
+}
+
+.next_journal:hover {
+  transform: translateY(1vh)
+  scale(1.1);
+  border-bottom: 10px solid #819096;
+  padding-top: 8vh;
+  margin-top: -4vh;
 }
 
 /* Journals Page */

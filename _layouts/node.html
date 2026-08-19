@@ -9,7 +9,9 @@ layout: new_default
     <a class="back" href="{{ page.back }}"><< BACK</a>
     <h1>{{ page.title }}</h1>
     <p class="retro">
+        {% if page.date %}
         Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
+        {% endif %}
         {%- if page.tags -%}
             {% for tag in page.tags %}
                 <a class="tags" href="{{site.baseurl}}/nodes/by_tag#{{tag | slugize}}">

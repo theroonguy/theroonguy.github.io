@@ -1,3 +1,13 @@
+url: http://haroon.amanullah.org
+
+plugins:
+  - jekyll-feed
+
+feed:
+  collections:
+    journal:
+      path: "/journal-feed.xml"
+
 exclude:
   - .vscode/
   - .github/

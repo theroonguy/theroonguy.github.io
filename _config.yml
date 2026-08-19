@@ -8,6 +8,8 @@ feed:
     journal:
       path: "/journal-feed.xml"
 
+timezone: America/New_York
+
 exclude:
   - .vscode/
   - .github/

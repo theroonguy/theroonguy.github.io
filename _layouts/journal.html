@@ -20,7 +20,7 @@ layout: new_default
     <a class="back" href="/nodes/journals"><< BACK</a>
     <h1>{{ page.title }}</h1>
     <p class="retro">
-        Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
+        Last edited: {{ page.date | date: "%B %-d, %Y at %I:%M %p"}}&nbsp;&nbsp;&#x2022;&nbsp;
         {%- if page.tags -%}
             {% for tag in page.tags %}
                 <a class="tags" href="{{site.baseurl}}/nodes/by_tag#{{tag | slugize}}">

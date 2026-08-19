@@ -2,6 +2,7 @@
 layout: journal
 title: The Energy AI Paradox
 tags: [energy, ai]
+date: 2026-08-18 20:14
 ---
 
 _NOTE: This is not a finalized research paper. Its depth and factual precision will need to be refined. So take everything with a grain of salt._

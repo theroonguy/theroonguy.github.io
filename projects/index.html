@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: new_default
 title: Projects 
 ---
 
@@ -23,32 +23,40 @@ title: Projects
 
 {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
 
-<label for="tag-filter"><strong>Filter by tag:</strong></label>
-<select id="tag-filter">
-  <option value="all">All</option>
-  {% for tag in tags %}
-    <option value="{{ tag }}">{{ tag | capitalize | replace: '_', ' ' }}</option>
+<div class="journal_background"></div>
+
+<section id="projects_page">
+  <a href="/"><< HOME</a>
+  <h1>Projects</h1>
+  <hr>
+
+  <label for="tag-filter"><strong>Filter by tag:</strong></label>
+  <select id="tag-filter">
+    <option value="all">All</option>
+    {% for tag in tags %}
+      <option value="{{ tag }}">{{ tag | capitalize | replace: '_', ' ' }}</option>
+    {% endfor %}
+  </select>
+
+  <h2>Current Projects</h2>
+  <div class="project-card-grid">
+  {% for project in sorted_projects %}
+    {% if project.status == "current" %}
+      {% include project-card.html project=project %}
+    {% endif %}
   {% endfor %}
-</select>
+  </div>
 
-<h2>Current Projects</h2>
-<div class="project-card-grid">
-{% for project in sorted_projects %}
-  {% if project.status == "current" %}
-    {% include project-card.html project=project %}
-  {% endif %}
-{% endfor %}
-</div>
-
-<div class="line"></div>
-<h2>Completed Projects</h2>
-<div class="project-card-grid">
-{% for project in sorted_projects %}
-  {% if project.status == "completed" %}
-    {% include project-card.html project=project %}
-  {% endif %}
-{% endfor %}
-</div>
+  <div class="line"></div>
+  <h2>Completed Projects</h2>
+  <div class="project-card-grid">
+  {% for project in sorted_projects %}
+    {% if project.status == "completed" %}
+      {% include project-card.html project=project %}
+    {% endif %}
+  {% endfor %}
+  </div>
+</section>
 
 
 <script>

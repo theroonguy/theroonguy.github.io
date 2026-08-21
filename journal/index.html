@@ -1,0 +1,42 @@
+---
+layout: new_default
+title: Journal
+---
+
+<div class="journal_background">
+</div>
+
+<section class="node">
+    <a class="back" href="/all_writings"><< ALL WRITINGS</a>
+    <h1>Journal</h1>
+    <p class="retro">
+        {% if page.date %}
+        Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
+        {% endif %}
+        {%- if page.tags -%}
+            {% for tag in page.tags %}
+                <a class="tags" href="{{site.baseurl}}/nodes/by_tag#{{tag | slugize}}">
+                    #{{ tag }}
+                </a>&nbsp;
+            {% endfor %}
+        {%- endif -%}    
+    </p>  
+    <hr>
+    <div class="content">
+        {% assign sorted_journals = site.journal | sort: 'date' | reverse %}
+
+        <div class="journal_list" style="display: grid;">
+        {% for journal in sorted_journals %}
+            <a class="journal_bar" href="{{ journal.url }}" style="display:flex; gap:10px">
+                {{ journal.date | date: "%B %-d, %Y"}} | {{ journal.title }}
+                
+                {%- if journal.tags -%}
+                    {% for tag in journal.tags %}
+                        <div style="font-size: 0.8rem; font-weight: 600;margin-inline: 10px;margin-top: 2px;">#{{ tag }}  </div>
+                    {% endfor %}
+                {%- endif -%}  
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+</section>

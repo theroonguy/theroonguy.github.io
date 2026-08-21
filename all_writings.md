@@ -17,11 +17,11 @@ layout: new_default
             time-independent and always evolving
         </p>
     </a>
-    <a id="writings" href="/nodes/writings">
+    <a id="writings" href="/writings/">
         <h2>Writings</h2>
         <p>essays, guides, or any other well-thought-out arrangements of words i'm confident enough to attach my name to.</p>
     </a>
-    <a id="journal" href="/nodes/journals">
+    <a id="journal" href="/journal/">
         <h2>Journal</h2>
         <p>about as informal as it gets here on this site! from a couple sentences to a word wall, this are thoughts that are one layer about my actual handheld journal.</p>
     </a>

@@ -261,7 +261,7 @@ section.new_homepage #status {
 
 @media (max-width: 600px) {
   section.new_homepage {
-    height: 150vh;
+    height: 200vh;
   }
 
   section.new_homepage #white_bg {
@@ -270,16 +270,16 @@ section.new_homepage #status {
   }
 
   section.new_homepage #orange_stripe {  
-    clip-path: polygon(0% 100%, 100% 0, 110% 0, 10% 100%);
+    clip-path: polygon(0% 100%, 90% 0, 100% 0, 10% 100%);
     scale: 2;
-    top: 50px;
+    top: 30vh;
   }
 
   section.new_homepage #journal {
     height: 300px;
     width: 300px;
     right: -120px;
-    top: 550px;
+    top: 150vh;
   }
 
   section.new_homepage h1 {
@@ -294,21 +294,29 @@ section.new_homepage #status {
   }
 
   section.new_homepage #bio {
-    font-size: 0.6rem;
+    font-size: 3.5vw;
     margin: 120px 30% 30px 30px;
     top: calc(0% + 4vw);
   }
 
   section.new_homepage #projects {
-    height: 100px;
-    left: 30px;
-    top: 330px;
-    font-size: 1rem;
+    height: 15vh;
+    left: 0;
+    top: 80vh;
+    opacity: 1;
+    font-size: 4vw;
+    padding: 1vh;
+    width: 40vw;
   }
 
   section.new_homepage #engineering {
-    height: 30px;
-    top: 280px;
+    height: 5vh;
+    top: 70vh;
+    left: 0px;
+    opacity: 1;
+    font-size: 4vw;
+    padding: 1vh;
+    margin: 0;
   }
 }
 
@@ -676,13 +684,27 @@ a.journal_bar:hover {
 /* Nodes */
 
 section.node {
-    background-color: var(--paper);
-    max-width: 700px;
-    margin: 50px auto;
-    font-family: Bitter;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 30px;
-    border-top-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+  background-color: var(--paper);
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+/* Projects */
+
+section#projects_page {
+  background-color: var(--paper);
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
 }

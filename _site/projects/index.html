@@ -18,31 +18,8 @@
 </head>
 
   <body>
-
-    <section id="header">
-    <nav class="middle">
-      <a href="/">> home</a>
-      <a href="/projects">> projects</a>
-      <a href="/nodes">> digital garth</a>
-      <a href="/nodes/concept_art">> concept art</a>
-      <a href="/about">> about</a>
-    </nav>
-    <div class="line"></div>
-</section>
-
-<!--<div style="height: 60px;"></div>-->
-
+        
     
-    <section class="blog">
-  <div style="display: flex; gap: 1em;">
-    <div>
-      <h1 class="retro">Projects</h1>
-      <p class="retro">
-          Last edited: August 19, 2026&nbsp;&nbsp;&#x2022;&nbsp;</p>   
-    </div></div>
-    <div class="line"></div><br> 
-    <div class="content">
-      
 
 
 
@@ -50,39 +27,44 @@
 
 
 
-<label for="tag-filter"><strong>Filter by tag:</strong></label>
-<select id="tag-filter">
-  <option value="all">All</option>
-  
-    <option value="CAD">Cad</option>
-  
-    <option value="design">Design</option>
-  
-    <option value="game_development">Game development</option>
-  
-    <option value="minecraft">Minecraft</option>
-  
-    <option value="music_production">Music production</option>
-  
-    <option value="social">Social</option>
-  
-    <option value="travel">Travel</option>
-  
-    <option value="videography">Videography</option>
-  
-    <option value="web_devlopment">Web devlopment</option>
-  
-    <option value="woodworking">Woodworking</option>
-  
-</select>
+<div class="journal_background"></div>
 
-<h2>Current Projects</h2>
-<div class="project-card-grid">
+<section id="projects_page">
+  <a href="/"><< HOME</a>
+  <h1>Projects</h1>
+  <hr>
 
-  
+  <label for="tag-filter"><strong>Filter by tag:</strong></label>
+  <select id="tag-filter">
+    <option value="all">All</option>
+    
+      <option value="CAD">Cad</option>
+    
+      <option value="design">Design</option>
+    
+      <option value="game_development">Game development</option>
+    
+      <option value="minecraft">Minecraft</option>
+    
+      <option value="music_production">Music production</option>
+    
+      <option value="social">Social</option>
+    
+      <option value="travel">Travel</option>
+    
+      <option value="videography">Videography</option>
+    
+      <option value="web_devlopment">Web devlopment</option>
+    
+      <option value="woodworking">Woodworking</option>
+    
+  </select>
 
+  <h2>Current Projects</h2>
+  <div class="project-card-grid">
   
-    <div class="project-card" data-tags="game_development">
+    
+      <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/tracerouter_yakov.png" alt="Tracerouter thumbnail" class="project-card-thumb" />
@@ -103,14 +85,33 @@
   <div class="project-card-desc">A fast, momentum-paced 3D parkour game set in a digital world being corrupted by a virus. (1st place UMD Game Jam Fall 2025)</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="game_development,minecraft,social">
+    
+      <div class="project-card" data-tags="web_devlopment">
   
   <div class="project-card-header">
     
-    <mark><a href="/projects/skyways_smp">Skyways SMP</a></mark>
+    <mark><a href="/projects/my-website">My Website</a></mark>
+  </div>
+  
+    <div class="project-card-tags">
+      
+        <a class="tags" href="/nodes/by_tag#web_devlopment">#web_devlopment</a>
+      
+    </div>
+  
+  <div class="project-card-desc">This website, built from scratch to showcase my projects, writings, and experience.</div>
+</div>
+
+    
+  
+    
+      <div class="project-card" data-tags="game_development,minecraft,social">
+  
+  <div class="project-card-header">
+    
+    <mark><a href="/projects/skyways-smp">Skyways SMP</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -126,55 +127,34 @@
   <div class="project-card-desc">A custom modded Minecraft SMP server with over 250 hand-picked mods and a unique community quest.</div>
 </div>
 
-  
-
-  
-    <div class="project-card" data-tags="web_devlopment">
-  
-  <div class="project-card-header">
     
-    <mark><a href="/projects/my_website">My Website</a></mark>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
   </div>
-  
-    <div class="project-card-tags">
-      
-        <a class="tags" href="/nodes/by_tag#web_devlopment">#web_devlopment</a>
-      
-    </div>
-  
-  <div class="project-card-desc">This website, built from scratch to showcase my projects, writings, and experience.</div>
-</div>
 
+  <div class="line"></div>
+  <h2>Completed Projects</h2>
+  <div class="project-card-grid">
   
-
+    
   
-
+    
   
-
+    
   
-
-  
-
-  
-
-  
-
-</div>
-
-<div class="line"></div>
-<h2>Completed Projects</h2>
-<div class="project-card-grid">
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class="project-card" data-tags="woodworking,CAD,design">
+    
+      <div class="project-card" data-tags="woodworking,CAD,design">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/cat_tower/cat_tower_wide.jpg" alt="Cat Tower thumbnail" class="project-card-thumb" />
@@ -185,7 +165,7 @@
     
       <span class="project-card-date">(07/13/26)</span>
     
-    <mark><a href="/projects/cat_tower">Cat Tower</a></mark>
+    <mark><a href="/projects/cat-tower">Cat Tower</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -201,10 +181,10 @@
   <div class="project-card-desc">A 6 feet tall, multilayered wooden cat tower furniture piece.</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="game_development">
+    
+      <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/minor_illusion.png" alt="Minor Illusion thumbnail" class="project-card-thumb" />
@@ -215,7 +195,7 @@
     
       <span class="project-card-date">(04/19/26)</span>
     
-    <mark><a href="/projects/minor_illusion">Minor Illusion</a></mark>
+    <mark><a href="/projects/minor-illusion">Minor Illusion</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -227,10 +207,10 @@
   <div class="project-card-desc">A tower defense game with only 1 tower and a whole lotta mirrors. (Micro Jam: Symmetry)</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="videography,travel">
+    
+      <div class="project-card" data-tags="videography,travel">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/iceland_video_title.png" alt="Iceland Trip Video thumbnail" class="project-card-thumb" />
@@ -241,7 +221,7 @@
     
       <span class="project-card-date">(03/31/26)</span>
     
-    <mark><a href="/projects/iceland_trip_video">Iceland Trip Video</a></mark>
+    <mark><a href="/projects/iceland-trip-video">Iceland Trip Video</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -255,10 +235,10 @@
   <div class="project-card-desc">A video I captured and edited of my study abroad trip to Iceland.</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="game_development">
+    
+      <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/tracerouter_jam_lowres.png" alt="Tracerouter (Game Jam) thumbnail" class="project-card-thumb" />
@@ -269,7 +249,7 @@
     
       <span class="project-card-date">(12/02/25)</span>
     
-    <mark><a href="/projects/tracerouter_game_jam">Tracerouter (Game Jam)</a></mark>
+    <mark><a href="/projects/tracerouter-game-jam">Tracerouter (Game Jam)</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -281,10 +261,10 @@
   <div class="project-card-desc">A fast, momentum-paced 3D parkour game set in a digital world being corrupted by a virus. (1st place UMD Game Jam Fall 2025)</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="game_development">
+    
+      <div class="project-card" data-tags="game_development">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/gamedev/devils_draw_lowres.png" alt="Devil's Draw thumbnail" class="project-card-thumb" />
@@ -295,7 +275,7 @@
     
       <span class="project-card-date">(05/04/25)</span>
     
-    <mark><a href="/projects/devils_draw">Devil's Draw</a></mark>
+    <mark><a href="/projects/devils-draw">Devil's Draw</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -307,10 +287,10 @@
   <div class="project-card-desc">A timed card game against the Devil that utilizes dying as a mechanic to increase the time limit and chain attacks. (1st place UMD Game Jam Spring 2025)</div>
 </div>
 
+    
   
-
-  
-    <div class="project-card" data-tags="music_production">
+    
+      <div class="project-card" data-tags="music_production">
   
     <div class="project-card-thumb-wrap">
       <img src="/img/music/the_ferry_lowres.jpg" alt="The Ferry thumbnail" class="project-card-thumb" />
@@ -321,7 +301,7 @@
     
       <span class="project-card-date">(07/28/23)</span>
     
-    <mark><a href="/projects/the_ferry">The Ferry</a></mark>
+    <mark><a href="/projects/the-ferry">The Ferry</a></mark>
   </div>
   
     <div class="project-card-tags">
@@ -333,9 +313,10 @@
   <div class="project-card-desc">A 6-track electronica EP that evolved with my experiences during the Pandemic and my transition out of high school.</div>
 </div>
 
+    
   
-
-</div>
+  </div>
+</section>
 
 
 <script>
@@ -384,28 +365,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-    </div>
-</section>
-
     
     <script src="/scripts/animations.js"></script>
     <script src="/scripts/youtube-music.js"></script>
     <script>hljs.highlightAll();</script>
-
-    <div class="line"></div>
-
-<section id="footer">
-    <div class="flex">
-        <div>
-            <h3>Haroon Amanullah</h3>
-            <p>haroon.a.amanullah@gmail.com</p>
-        </div>
-        <div style="text-align: right; align-self: right;">
-            <p>Hi! I'm Haroon, a MechE student at the University of Maryland with a few too many creative outlets. Thanks for checking out my site :)</p>
-            <a href="/node">Check out my blog here!</a>
-        </div>
-    </div>
-</section>
 
     <div id="lightbox" class="lightbox" aria-hidden="true">
       <button type="button" class="lightbox__close" aria-label="Close">&times;</button>

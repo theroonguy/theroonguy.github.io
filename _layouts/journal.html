@@ -30,6 +30,9 @@ layout: new_default
         {%- endif -%}    
     </p>  
     <hr>
+    {% if page.status == "draft" %}
+    <div class="draft">This is a draft! It is not finished! Look away while you still can!</div>
+    {% endif %}
     <div class="content">
         {{ content }}
     </div>

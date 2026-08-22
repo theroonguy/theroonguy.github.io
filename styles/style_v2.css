@@ -674,6 +674,13 @@ a.inline:hover, .journal a:hover {
   margin-top: -4vh;
 }
 
+.draft {
+  background-color: rgb(245, 206, 80);
+  padding: 5px;
+  border: 2px solid var(--background);
+  font-size: 1.3rem;
+}
+
 /* Journals Page */
 
 a.journal_bar {

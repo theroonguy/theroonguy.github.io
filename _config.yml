@@ -32,4 +32,4 @@ collections:
     permalink: /writing/:path
   books:
     output: true
-    permalink: /bookshelf/:path
+    permalink: /books/:path

@@ -1,0 +1,21 @@
+---
+layout: new_default
+title: "Bookshelf"
+---
+
+{% assign sorted_books = site.books | sort: 'date' | reverse %}
+
+<section id="bookshelf_background">
+    <div id="bookshelf">
+        <a class="back" href="/"><< HOME</a>
+        <h1>Bookshelf</h1>
+    </div>
+</section>
+
+<div class="book_card_array">
+{% for book in sorted_books %}
+    <a class="book_card" href="{{ book.url }}">
+        {{ book.title }}
+    </a>
+{% endfor %}
+</div>

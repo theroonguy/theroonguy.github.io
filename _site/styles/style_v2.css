@@ -796,6 +796,33 @@ a.book_card {
   background-color: var(--paper);
 }
 
+/* Engineering Page */
+
+section.selected_work {
+  position: relative;
+  height: 95vh;
+  width: 100vw;
+  margin-left: -45px;
+  background-color: rgb(172, 157, 218);
+  border-bottom: 10px solid var(--strong-accent-new);
+  margin-bottom: 30px;
+}
+
+section.selected_work .info_box {
+  position:absolute;
+  width: 38vw; 
+  background-color: var(--paper); 
+  margin: 30px; 
+  padding-inline: 15px;
+}
+
+.skill-tag {
+  background-color: var(--strong-accent-new);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
 /* General */
 
 .significant {

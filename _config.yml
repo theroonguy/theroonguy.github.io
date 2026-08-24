@@ -29,7 +29,7 @@ collections:
     permalink: /journal/:path
   writings:
     output: true
-    permalink: /writing/:path
+    permalink: /writings/:path
   books:
     output: true
     permalink: /books/:path

@@ -563,7 +563,7 @@ section.writings #mid_shelf {
     height: 800px;
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: -10;
 }
 
 .journal {
@@ -794,4 +794,51 @@ a.book_card {
   height: 250px;
   padding: 10px;
   background-color: var(--paper);
+}
+
+/* General */
+
+.significant {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 15px auto;
+  background-color: #94e2f7;
+  padding: 15px;
+  transform: skewX(-5deg);
+}
+
+.side_heading {
+  /* font-size: 1.2rem; */
+  width: 150px;
+  background-color: #94e2f7;
+  padding-top: 25px;
+  /* transform: skewX(-10deg); */
+  width: calc(100% - 60px);
+  height: 100%;
+}
+
+.side_heading h1 {
+  transform-origin: right bottom;
+  transform: 
+    /* translateY(-50px) */
+    /* translateX(45px) */
+    translateX(-45px)
+    translateY(150px)
+    rotate(-90deg);
+  font-family: Bitter;
+  font-weight: 600;
+  /* margin: auto; */
+  font-size: 2.5rem;
+  /* writing-mode: vertical-lr; */
+  /* text-orientation: upright;  */
+  /* letter-spacing: -10px; */
+}
+
+mark {
+  background-color: var(--strong-accent-new);
+  color: var(--background);
+}
+
+.middle {
+  max-width: 800px;
 }

@@ -2,13 +2,25 @@
 layout: new_default
 ---
 
+{% assign sorted_nodes = site.nodes | sort: "date" %}
+
+{% for node in sorted_nodes %}
+    {% if node == page %}
+        {% assign node_id = forloop.index | prepend: "00" | slice: -3, 3%}
+    {% endif %}
+{% endfor %}
 
 <div class="journal_background">
 </div>
 
+{% if page.full_width %}
+<section class="node full_width">
+{% else %}
 <section class="node">
-    <a class="back" href="/all_writings"><< ALL WRITINGS</a>
-    <h1>Writings</h1>
+{% endif %}
+    <a class="back" href="/writings"><< WRITINGS</a>
+    <h2 style="font-family: Bruno Ace; margin-bottom: 0;">NODE {{ node_id }} // </h2>
+    <h1>{{ page.title }}</h1>
     <p class="retro">
         {% if page.date %}
         Last edited: {{ page.date | date: "%B %-d, %Y"}}&nbsp;&nbsp;&#x2022;&nbsp;
@@ -23,14 +35,6 @@ layout: new_default
     </p>  
     <hr>
     <div class="content">
-        {% assign sorted_nodes = site.writings | sort: 'date' | reverse %}
-
-        <div class="journal_list" style="display: grid;">
-        {% for node in sorted_nodes %}
-            <a class="journal_bar" href="{{ node.url }}">
-                {{ node.date | date: "%B %-d, %Y"}} | {{ node.title }}
-            </a>
-        {% endfor %}
-        </div>
+        {{ content }}
     </div>
 </section>

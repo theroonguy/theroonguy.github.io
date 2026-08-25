@@ -28,23 +28,45 @@ layout: new_default
         {% endif %}
 
         {% unless media.status == "in progress" %}
-            <div class="media_entry">
-                <div style="grid-area: title">
-                    {{ media.title }}<br>
-                    {{ media.media_type }}
+            <a class="media_entry">
+                <div style="grid-area: icon; text-align: center; align-self: center;">
+                    {% if media.media_type == "movie" %}
+                        <i class="fa-solid fa-clapperboard"></i>
+                    {% elsif media.media_type == "book" %}
+                        <i class="fa-solid fa-book"></i>
+                    {% elsif media.media_type == "concert" %}
+                        <i class="fa-solid fa-ticket"></i>
+                    {% elsif media.media_type == "album" %}
+                        <i class="fa-solid fa-compact-disc"></i>
+                    {% elsif media.media_type == "webseries" %}
+                        <i class="fa-solid fa-tv"></i>
+                    {% endif%} 
+                </div>
+                <div style="grid-area: title;">
+                    {{ media.title }}
+                    {% if media.rewatch %}
+                        &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrows-rotate"></i>
+                    {% endif %}
+                    <br>
+                    <div style="font-size: 0.9rem">
                     {% for tag in media.tags %}
-                        {{ tag }}
+                        {% if media.tags.first ==  tag %}
+                            {{ tag }}
+                        {% else %}
+                        ,  {{ tag }}
+                        {% endif%}
                     {% endfor%}
+                    </div>
                 </div>
                 <div style="grid-area: rating; text-align: right; width: 100%">
                     <span class="star-rating" data-rating="{{media.rating}}"></span><br>
                     {{ media.date | date: "%B %-d, %Y"}}
                 </div>
-                <details style="margin: auto; grid-area: review;">
-                    <summary>Show Review</summary>
+                <details style="margin: auto; left: 0; right: 0; grid-area: review; justify-items: center;">
+                    <summary></summary>
                     <p>{{ media.content }}</p>
                 </details>
-            </div>
+            </a>
         {% endunless %}
     {% endfor %}
 </section>

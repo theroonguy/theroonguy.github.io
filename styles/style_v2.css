@@ -813,22 +813,30 @@ section#media {
 }
 
 .media_entry {
+  font-weight: 400;
   width: 100%;
   padding: 10px;
   transform: translateX(-10px);
   margin-bottom: 15px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 25px auto;
+  grid-template-columns: 1fr 8fr 3fr;
+  grid-template-rows: 15px auto;
   grid-template-areas: 
-    "title rating"
-    "review review"
+    "icon title rating"
+    "icon review review"
   ;
-  background-color: #cfdcff;
+  background-color: #d2d2ff;
   color: var(--background);
-  border-bottom: 2px solid var(--background);
-  border-left: 2px solid var(--background);
+  /* border-bottom: 2px solid var(--background); */
+  /* border-left: 2px solid var(--background); */
+  border: 2px solid var(--background);
   line-height: 1rem;
+  letter-spacing: -0.05rem;
+  transition: 0.3s ease;
+}
+
+.media_entry:hover {
+  border-bottom: 12px solid var(--background);
 }
 
 .star-rating::after {
@@ -846,6 +854,23 @@ h2.month-header {
   padding: 10px;
   text-align: center;
   font-family: Bruno Ace;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::before {
+  content: "⤵"; 
+  /* content: "↧"; */
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+details[open] summary::before {
+  content: "⤴";
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 /* Engineering Page */

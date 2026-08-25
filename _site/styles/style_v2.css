@@ -141,7 +141,7 @@ section.new_homepage #journal {
   height: 300px;
   width: 300px;
   right: -120px;
-  top: 60px;
+  top: -20px;
   clip-path: circle(40% at 50% 50%);
   text-align: right;
   text-decoration: none;
@@ -180,7 +180,7 @@ section.new_homepage #music {
   padding: 5px 15px;
   color: var(--paper);
   border: none;
-  right: 40px;
+  right: 300px;
   bottom: 260px;
   transform: perspective(200px) rotateY(-30deg);
 
@@ -273,6 +273,58 @@ section.new_homepage .copyright_notice {
   bottom: 15px;
   position: absolute;
   left: 7px;
+}
+
+section.new_homepage #changelog {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  /* padding: 10px; */
+  background: linear-gradient(
+    var(--strong-accent-new) 30px,
+    var(--paper) 30px
+  );
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  /* border-radius: 10px; */
+  right: 30px;
+  bottom: 30vh;
+
+  transform: 
+    perspective(300px)
+    rotateY(-20deg)
+  ;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  letter-spacing: -0.05rem;
+}
+
+section.new_homepage #changelog:hover,
+section.new_homepage #changelog:focus-within {
+  transform: 
+  translateY(-6px)
+  scale(1.1)
+  ;
+}
+
+section.new_homepage #changelog h1 {
+  font-size: 1rem;
+  margin: 5px;
+  color: var(--paper);
+  text-align: right;
+}
+
+section.new_homepage #changelog ul {
+  margin-top: 35px;
+  height: 80%;
+  font-family: Bitter;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-left: 20px;
+  overflow-y: scroll;
+
+  scrollbar-color: var(--background) transparent;
+  scrollbar-width: thin;
 }
 
 @media (max-width: 600px) {

@@ -30,6 +30,6 @@ collections:
   writings:
     output: true
     permalink: /writings/:path
-  books:
+  media:
     output: true
-    permalink: /books/:path
+    permalink: /media/:path

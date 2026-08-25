@@ -796,6 +796,36 @@ a.book_card {
   background-color: var(--paper);
 }
 
+/* Media Codex */
+
+section#media {
+  background-color: var(--paper);
+  max-width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-inline: auto;
+  font-family: Bitter;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 30px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.media_entry {
+  width: 100%;
+  padding: 10px;
+  transform: translateX(-10px);
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: #cfdcff;
+  color: var(--background);
+  border-bottom: 2px solid var(--background);
+  border-left: 2px solid var(--background);
+  line-height: 1rem;
+}
+
 /* Engineering Page */
 
 section.selected_work {

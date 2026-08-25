@@ -5,7 +5,7 @@ layout: new_default
 {% assign sorted_nodes = site.nodes | sort: "date" %}
 
 {% for node in sorted_nodes %}
-    {% if node == page %}
+    {% if node.url == page.url %}
         {% assign node_id = forloop.index | prepend: "00" | slice: -3, 3%}
     {% endif %}
 {% endfor %}

@@ -2,7 +2,6 @@
 layout: journal
 title: Can We Make Digital Consciousness?
 tags: [ai, neuroscience]
-status: draft
 date: 2026-08-22 01:51
 ---
 

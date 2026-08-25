@@ -28,3 +28,4 @@ Looking into it, it turns out that neurons might be the most diverse kinds of ce
 
 We don't even know if our brains function using time as the independent variable. Of course, it's the most convenient option to record brain activity spikes according to a stopwatch, which is what the majority of neuroscience bases its research on. But there's experimental inconsistencies that suggest our neurons function based on spatial or state parameters. Time could very much be a subjective experience. In high-adrenaline situations, people report feeling like time slows down---it's entirely possible that for them, time really *does* slow down. [Roland](https://pmc.ncbi.nlm.nih.gov/articles/PMC10585277/)
 
+_NOTE: I was going somewhere with this but my thoughts will have to be continued at a later date._

@@ -555,6 +555,15 @@ section.writings #mid_shelf {
     z-index: 1;
 }
 
+section.writings a#media {
+  position: relative;
+  background-color: var(--strong-accent-new);
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  top: -90px;
+}
+
 /* JOURNAL */
 
 .journal_background {
@@ -799,6 +808,7 @@ a.book_card {
 /* Media Codex */
 
 section#media {
+  position: relative;
   background-color: var(--paper);
   max-width: 700px;
   margin-top: 50px;
@@ -810,6 +820,9 @@ section#media {
   padding: 30px;
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
+
+  outline: 3px solid var(--strong-accent-new);
+  outline-offset: 15px;
 }
 
 .media_entry {
@@ -880,10 +893,15 @@ section#media {
 }
 
 h2.month-header {
+  position: relative;
   background-color: var(--strong-accent-new);
   padding: 10px;
   text-align: center;
   font-family: Bruno Ace;
+  width: 110%;
+  left: -45px;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 summary {
@@ -903,6 +921,155 @@ details[open] summary::before {
   content: "⤴";
   font-weight: 800;
   font-size: 1.2rem;
+}
+
+#media_heading_strip {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--background); */
+  background: linear-gradient(90deg, #2e383d, #0f0d09);
+  /* background: linear-gradient(90deg, var(--strong-accent-new), #e79b59); */
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 2;
+
+  clip-path: polygon(
+    0 0,
+    100% calc(150px + 6vw),
+    100% calc(280px - 2vw),
+    0 calc(300px + 6vw)
+  );
+}
+
+#media_orange_strip {
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--background); */
+  /* background: linear-gradient(90deg, #2e383d, #0f0d09); */
+  background: linear-gradient(90deg, var(--strong-accent-new), #e79b59);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 2;
+
+  clip-path: polygon(
+    0 0,
+    100% calc(150px + 6vw),
+    100% calc(300px - 2vw),
+    0 calc(320px + 6vw)
+  );
+}
+
+.slanted_bars {
+  position: absolute;
+  height: 220px;
+  background: repeating-linear-gradient(
+    145deg,
+    #f04b39,
+    #ea604b 15px,
+    #633029 15px,
+    #893f35 30px
+  );
+  /* width: calc(100% - 10px);
+  margin: 5px;
+  top: 5px; */
+  z-index: 2;
+
+  width: calc(100% - 20px);
+  border: 10px solid var(--paper);
+}
+
+h1.big_slant {
+  position: relative;
+  font-size: 15rem; 
+  white-space: nowrap;
+  font-weight: 800; 
+  transform: 
+    perspective(300px) 
+    rotateY(30deg) 
+    scale(0.7) 
+    translateX(0px)
+    translateY(-35px); 
+  margin-bottom: -35px;
+  color: var(--strong-accent-new);
+  z-index: 3;
+}
+
+#media_in_progress {
+  position: relative;
+  max-width: 300px;
+  border: 3px solid #101010;
+  border-radius: 10px;
+  padding-right: 20px;
+  /* padding-left: 10px; */
+  justify-self: right;
+  right: -80px;
+  /* top: -20px; */
+  background: linear-gradient(
+    to bottom,
+    var(--strong-accent-new) 36px,
+    var(--paper) 36px
+  );
+}
+
+#media_in_progress h3 {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+#media_in_progress ul {
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+#media_in_progress ul li {
+  margin-bottom: 10px;
+}
+
+#media_in_progress::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  background-color: #101010;
+  height: 3px;
+  top: 36px;
+}
+
+.small_box {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  background-color: var(--strong-accent-new);
+  left: 15px;
+  top: 320px;
+  border: 3px solid #101010;
+  border-radius: 10px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  align-content: center;
+  padding-left: 5px;
+
+  transition: 0.3s ease-in-out;
+}
+
+.small_box:hover {
+  width: 120px;
+  left: -65px;
+}
+
+.lines {
+  /* width: calc(100% - 600px); */
+  height: 2px;
+  left: 80px;
+  right: 39%;
+  background-color: rgb(73, 62, 56);
+  position: absolute;
+  top: 350px;
 }
 
 /* Engineering Page */
@@ -978,3 +1145,4 @@ mark {
 .middle {
   max-width: 800px;
 }
+

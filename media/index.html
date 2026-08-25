@@ -5,19 +5,41 @@ layout: new_default
 {% assign sorted_media = site.media | sort: 'date' | reverse %}
 {% assign current_month = "" %}
 
-<div class="journal_background"></div>
+<!-- <div class="journal_background"></div> -->
+
+<div class="slanted_bars"></div>
+<div id="media_orange_strip"></div>
+<div id="media_heading_strip"></div>
 
 <section id="media">
-    <h1>Media Codex</h1>
+    <h1 class="big_slant">Media Log</h1>
 
-    <h3>In Progress:</h3>
-    <ul>
-    {% for media in sorted_media %}
-        {% if media.status == "in progress" %}
-            <li>{{ media.title }}</li>
-        {% endif%}
-    {% endfor %}
-    </ul>
+    <a class="small_box" href="/all_writings"><< BACK</a>
+    <div class="lines"></div>
+    <div class="lines" style="transform: translateY(-15px);"></div>
+
+    <div id="media_in_progress">
+        <h3>In Progress:</h3>
+        <ul>
+        {% for media in sorted_media %}
+            {% if media.status == "in progress" %}
+                <li>
+                    {{ media.title }}
+                    <div style="opacity: 0.8; font-size: 0.9rem;">
+                    {{ media.media_type }} - 
+                    {% for tag in media.tags %}
+                        {% if media.tags.first ==  tag %}
+                            {{ tag }}
+                        {% else %}
+                        ,  {{ tag }}
+                        {% endif%}
+                    {% endfor %}
+                    </div>
+                </li>
+            {% endif%}
+        {% endfor %}
+        </ul>
+    </div>
 
     {% for media in sorted_media %}
         {% assign this_month = media.date | date: "%B" %}

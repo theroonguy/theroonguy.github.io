@@ -1,6 +1,6 @@
 ---
 title: "JOHANNES CABAL: THE DETECTIVE (2010)"
-tags: []
+tags: [mystery, steampunk]
 media_type: book
 status: in progress
 date_started: 2026-06-01

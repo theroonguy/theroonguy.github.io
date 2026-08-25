@@ -28,6 +28,7 @@ layout: new_default
     <div id="lower_shelf"></div>
     <div id="mid_shelf"></div>
     <div style="position:absolute;bottom: 30px;right: 30px; width: 200px;">
+        <a href="/media" id="media">Media Log</a>
         
         <img src="https://media.thuvien.org/photo/59001/image/795bf0953ea48a28fa0f6c8873f99c45.gif">
         <img src="https://media.thuvien.org/photo/56462/image/9f8389ba73cda4ea2d275c0fe4a6dc79.png">

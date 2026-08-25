@@ -3,29 +3,48 @@ layout: new_default
 ---
 
 {% assign sorted_media = site.media | sort: 'date' | reverse %}
+{% assign current_month = "" %}
 
 <div class="journal_background"></div>
 
 <section id="media">
     <h1>Media Codex</h1>
 
+    <h3>In Progress:</h3>
+    <ul>
     {% for media in sorted_media %}
-        <div class="media_entry">
-            <div>
-                {{ media.title }}<br>
-                {{ media.media_type }}
-                {% for tag in media.tags %}
-                    {{ tag }}
-                {% endfor%}
+        {% if media.status == "in progress" %}
+            <li>{{ media.title }}</li>
+        {% endif%}
+    {% endfor %}
+    </ul>
+
+    {% for media in sorted_media %}
+        {% assign this_month = media.date | date: "%B" %}
+
+        {% if this_month != current_month %}
+            <h2 class="month-header">{{ this_month }}</h2>
+            {% assign current_month = this_month %}
+        {% endif %}
+
+        {% unless media.status == "in progress" %}
+            <div class="media_entry">
+                <div style="grid-area: title">
+                    {{ media.title }}<br>
+                    {{ media.media_type }}
+                    {% for tag in media.tags %}
+                        {{ tag }}
+                    {% endfor%}
+                </div>
+                <div style="grid-area: rating; text-align: right; width: 100%">
+                    <span class="star-rating" data-rating="{{media.rating}}"></span><br>
+                    {{ media.date | date: "%B %-d, %Y"}}
+                </div>
+                <details style="margin: auto; grid-area: review;">
+                    <summary>Show Review</summary>
+                    <p>{{ media.content }}</p>
+                </details>
             </div>
-            <div style="text-align: right; width: 100%">
-                {{ media.rating }}<br>
-                {{ media.date | date: "%B %-d, %Y"}}
-            </div>
-            <details style="margin: auto;">
-                <summary>Show Review</summary>
-                <p>{{ media.content }}</p>
-            </details>
-        </div>
+        {% endunless %}
     {% endfor %}
 </section>

@@ -819,11 +819,33 @@ section#media {
   margin-bottom: 15px;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: 25px auto;
+  grid-template-areas: 
+    "title rating"
+    "review review"
+  ;
   background-color: #cfdcff;
   color: var(--background);
   border-bottom: 2px solid var(--background);
   border-left: 2px solid var(--background);
   line-height: 1rem;
+}
+
+.star-rating::after {
+  content: "★★★★★";
+  color: transparent;
+
+  --rating-percent: calc(attr(data-rating number) / 5 * 100%);
+  background: linear-gradient(90deg, var(--strong-accent-new) var(--rating-percent), var(--background) var(--rating-percent));
+
+  background-clip: text;
+}
+
+h2.month-header {
+  background-color: var(--strong-accent-new);
+  padding: 10px;
+  text-align: center;
+  font-family: Bruno Ace;
 }
 
 /* Engineering Page */

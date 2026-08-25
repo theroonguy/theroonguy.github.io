@@ -873,7 +873,7 @@ section#media {
   content: "★★★★★";
   color: transparent;
 
-  --rating-percent: calc(attr(data-rating number) / 5 * 100%);
+  --rating-percent: calc(var(--rating) / 5 * 100%);
   background: linear-gradient(90deg, var(--strong-accent-new) var(--rating-percent), var(--background) var(--rating-percent));
 
   background-clip: text;

@@ -61,7 +61,7 @@ layout: new_default
                         </div>
                     </div>
                     <div style="grid-area: rating; text-align: right; width: 100%">
-                        <span class="star-rating" data-rating="{{media.rating}}"></span><br>
+                        <span class="star-rating" style="--rating: {{media.rating}};"></span><br>
                         {{ media.date | date: "%B %-d, %Y"}}
                     </div>
                 </summary>

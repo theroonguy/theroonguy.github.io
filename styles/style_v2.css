@@ -1004,8 +1004,8 @@ h1.big_slant {
   border-radius: 10px;
   padding-right: 20px;
   /* padding-left: 10px; */
-  justify-self: right;
-  right: -80px;
+  /* justify-self: right; */
+  right: -460px;
   /* top: -20px; */
   background: linear-gradient(
     to bottom,

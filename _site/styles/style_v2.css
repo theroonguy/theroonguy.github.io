@@ -59,7 +59,7 @@ section.new_homepage {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 section.new_homepage #white_bg {
@@ -144,12 +144,13 @@ section.new_homepage h1 {
 
 section.new_homepage #bio {
   /* font-size: 1rem; */
-  font-size: 1.8vw;
+  font-size: calc(0.5vw + 1.5vh);
   font-family: Bitter;
   font-weight: 400;
   position: absolute;
   margin: 150px 50% 30px 30px;
-  top: calc(5% + 5vw);
+  margin-top: 5vh;
+  top: calc(5% + 12vw);
 }
 
 section.new_homepage #journal {

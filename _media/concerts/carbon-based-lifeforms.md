@@ -1,7 +1,9 @@
 ---
 title: CARBON BASED LIFEFORMS (2026)
 media_type: concert
-tags: [electronic]
+tags: [electronic, ambient]
 rating: 4
 date: 2026-03-07
 ---
+
+i never thought i'd see this band live, much less in their home country of Sweden. i listened to a few of their tracks all the time during covid, so hearing them thrum through me like an earthquake was wild and surprisingly nostalgic. amazing, conteplative music at an eccentric stylized venue. i remember feeling at the time particularly close to this music because it fit the vibe of my game [tracerouter](/projects/tracerouter) so much, which i had been working on religiously.

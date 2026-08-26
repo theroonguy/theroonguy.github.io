@@ -59,6 +59,7 @@ section.new_homepage {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: -2;
 }
 
 section.new_homepage #white_bg {
@@ -69,7 +70,7 @@ section.new_homepage #white_bg {
   right: 15px;
   height: calc(100vh - 30px);
   
-  clip-path: polygon(0 0, calc(150px + 60vw) 0, calc(-450px + 60vw + (500px - 50vh)) 100%, 0 100%);
+  clip-path: polygon(0 0, calc(150px + 60vw) 0, calc(-450px + 60vw + (650px - 75vh)) 100%, 0 100%);
 
   outline: 1.5px dashed var(--background);
   outline-offset: -7.5px;
@@ -107,22 +108,28 @@ section.new_homepage #orange_triangle {
 section.new_homepage #orange_circle {
   background-color: var(--strong-accent-new);
   position: absolute;
-  width: 180px;
-  height: 180px;
-  bottom: 0px;
-  right: 0px;
-  scale: 2;
+  /* width: 180px;
+  height: 180px; */
+  width: 45vh;
+  height: 45vh;
+  bottom: -50px;
+  right: -50px;
+  /* scale: 2; */
+  /* scale: calc(2 * 20vh); */
+  /* transform: scale(calc(25vh / 100px)); */
 
-  mask-image: radial-gradient(#000 50%,
-  #0000 0);
+  mask-image: radial-gradient(#000 50%,#0000 0);
 
 }
 
 section.new_homepage #orange_circle img {
   position:absolute;
-  scale: 0.2;
-  right: -390px;
-  bottom: -420px;
+  /* scale: 0.2; */
+  scale: 0.4;
+  /* right: -390px; */
+  /* bottom: -420px; */
+  right: calc(-300px + 20vh - 150px);
+  bottom: calc(-380px + 20vh - 150px);
   pointer-events: none;
   image-rendering:optimizeSpeed;
 }
@@ -136,7 +143,8 @@ section.new_homepage h1 {
 }
 
 section.new_homepage #bio {
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 1.8vw;
   font-family: Bitter;
   font-weight: 400;
   position: absolute;
@@ -292,8 +300,10 @@ section.new_homepage #projects:hover {
 
 section.new_homepage #status {
   position:absolute;
-  width: 200px;
-  height: 100px;
+  /* width: 200px; */
+  /* height: 100px; */
+  width: 20vw;
+  height: 10vh;
   bottom: 30px;
   padding: 8px 15px;
   color: white;
@@ -320,8 +330,8 @@ section.new_homepage .copyright_notice {
 
 section.new_homepage #changelog {
   position: absolute;
-  width: 200px;
-  height: 250px;
+  width: 20vh;
+  height: 30vh;
   /* padding: 10px; */
   background: linear-gradient(
     var(--strong-accent-new) 30px,

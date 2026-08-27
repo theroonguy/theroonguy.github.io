@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: Concept Art
 tags: ["node_index", "concept_art"]
 date: 2025-04-08

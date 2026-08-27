@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Iceland 2025"
 tags: [travel]
 date: [2025-03-22]

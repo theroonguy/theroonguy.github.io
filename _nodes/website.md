@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Getting started with coding websites"
 tags: ["coding"]
 date: 2025-04-08

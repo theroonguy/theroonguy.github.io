@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Portugal 2024"
 tags: [travel]
 date: [2024-12-29]

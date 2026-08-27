@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Guatemala Trip"
 tags: [travel]
 date: [2024-12-29]

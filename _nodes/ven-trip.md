@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Ven Trip"
 tags: [travel, sweden]
 date: [2026-05-06]

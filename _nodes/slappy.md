@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: Slappy Rules
 tags: ["slappy"]
 date: 2025-04-08

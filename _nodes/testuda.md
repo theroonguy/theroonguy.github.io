@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: Testuda Concept Art
 tags: [concept_art]
 date: 2025-06-10

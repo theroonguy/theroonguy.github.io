@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node
 title: "Madrid Trip"
 tags: [travel]
 date: [2026-03-22]

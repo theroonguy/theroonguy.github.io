@@ -148,8 +148,8 @@ section.new_homepage #bio {
   font-family: Bitter;
   font-weight: 400;
   position: absolute;
-  margin: 150px 50% 30px 30px;
-  margin-top: 5vh;
+  margin: 150px 50% 30px 45px;
+  margin-top: calc(3vh + 20px);
   top: calc(5% + 12vw);
 }
 
@@ -342,7 +342,7 @@ section.new_homepage #changelog {
   border-bottom: 5px solid black;
   /* border-radius: 10px; */
   right: 30px;
-  bottom: 30vh;
+  bottom: 35vh;
 
   transform: 
     perspective(300px)

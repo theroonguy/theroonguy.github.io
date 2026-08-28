@@ -4,9 +4,29 @@
 
 <script>
   // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
-  const videoList = ["dQw4w9WgXcQ", "3JZ_D3ELwOQ", "L_LUpnjgPso", "fJ9rUzIMcZQ"];
+    const videoList = [
+        "Og7S-sk4GVs", // Podcast Host Can't Stop Laughing at Guy's Ticks 
+        "ff0J91_ePAw", // chuck mcgill open verse
+        "d1DaDiWkYxs", // ai mike
+        "4PUIxEWmsvI", // world of tomorrow
+        "5qjnDd1rsII", // potato war
+        "E8X4pVVYWn8", // dynamo dream ep3
+        "IvUU8joBb1Q", // marble machine
+        "wO61D9x6lNY", // outside in
+        "9XClfe95mbI", // crab battle
+        "AqA71cWs1WA", // hyperbole
+        "XPm7zy-X_fI", // volta
+        "JUp9pCtn2BY", // wilford
+        "4mkkIdR4eLk", // perfect day/something stupid
+        "5AhZh4A7NLM", // i want to die
+        "vyDvpwpRPM4", // world's wierdest animals
+        "DPIoje1nfCQ", // blinker
+        "Cqd1Gvq-RBY", // numa numa
+        "PIOQWIvdUoM", // vigs
+        "I787v-so8fo", // jazzy creep
+    ];
 
-  function changeChannel() {
+    function changeChannel() {
     const randomIndex = Math.floor(Math.random() * videoList.length);
     const randomVideo = videoList[randomIndex];
     // Set src with autoplay enabled

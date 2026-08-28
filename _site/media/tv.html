@@ -21,7 +21,9 @@
         
     <section id="tv-background">
     <div id="tv">
-        <iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- Target container for YouTube API (Use DIV instead of IFRAME) -->
+        <div id="tv-screen"></div>
+
         <div id="tv-shading"></div>
 
         <div id="tv-controls">
@@ -30,42 +32,19 @@
     </div>
 </section>
 
-<script src="https://www.youtube.com/iframe_api"></script>
-
 <script>
-  // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
     const originalList = [
-        "Og7S-sk4GVs", // Podcast Host Can't Stop Laughing at Guy's Ticks 
-        "ff0J91_ePAw", // chuck mcgill open verse
-        "d1DaDiWkYxs", // ai mike
-        "4PUIxEWmsvI", // world of tomorrow
-        "5qjnDd1rsII", // potato war
-        "E8X4pVVYWn8", // dynamo dream ep3
-        "IvUU8joBb1Q", // marble machine
-        "wO61D9x6lNY", // outside in
-        "9XClfe95mbI", // crab battle
-        "AqA71cWs1WA", // hyperbole
-        "XPm7zy-X_fI", // volta
-        "JUp9pCtn2BY", // wilford
-        "4mkkIdR4eLk", // perfect day/something stupid
-        "5AhZh4A7NLM", // i want to die
-        "vyDvpwpRPM4", // world's wierdest animals
-        "DPIoje1nfCQ", // blinker
-        "Cqd1Gvq-RBY", // numa numa
-        "PIOQWIvdUoM", // vigs
-        "I787v-so8fo", // jazzy creep
-        "6FF1p--Zfjw", // so
-        "ctRembqQCcw", // isle unto thyself
-        "W86cTIoMv2U", // smallest cat
-        "9FX34TjJe-c", // carrie and lowell
-        "YG8wLT8SFiw", // mercury
-        "I27kmmpiJl0", // midnight moon
-        "MNLtEME8B_c", // electronic labyrinth
+        "Og7S-sk4GVs", "ff0J91_ePAw", "d1DaDiWkYxs", "4PUIxEWmsvI", 
+        "5qjnDd1rsII", "E8X4pVVYWn8", "IvUU8joBb1Q", "wO61D9x6lNY", 
+        "9XClfe95mbI", "AqA71cWs1WA", "XPm7zy-X_fI", "JUp9pCtn2BY", 
+        "4mkkIdR4eLk", "5AhZh4A7NLM", "vyDvpwpRPM4", "DPIoje1nfCQ", 
+        "Cqd1Gvq-RBY", "PIOQWIvdUoM", "I787v-so8fo", "6FF1p--Zfjw", 
+        "ctRembqQCcw", "W86cTIoMv2U", "9FX34TjJe-c", "YG8wLT8SFiw", 
+        "I27kmmpiJl0", "MNLtEME8B_c"
     ];
     
     let deck = [];
     let player;
-    let isSeeking = false; // Flag to prevent infinite seek loops
 
     function getNextVideo() {
         if (deck.length === 0) {
@@ -74,61 +53,58 @@
         return deck.pop();
     }
 
-    // 1. YouTube API automatically calls this when it finishes loading
-    function onYouTubeIframeAPIReady() {
+    // Biased timestamp generator (returns integer seconds)
+    function getRandomStart() {
+        if (Math.random() < 0.7) {
+            return Math.floor(Math.random() * 30); // 0-30 seconds
+        } else {
+            return Math.floor(Math.pow(Math.random(), 3) * 120); // Skewed 0-120s
+        }
+    }
+
+    // Global API ready callback MUST be defined before loading the API script
+    window.onYouTubeIframeAPIReady = function() {
+        const initialVideo = getNextVideo();
+        const initialStart = getRandomStart();
+
         player = new YT.Player('tv-screen', {
-            videoId: getNextVideo(),
+            height: '315',
+            width: '560',
+            videoId: initialVideo,
             playerVars: {
                 'autoplay': 1,
                 'controls': 0,
                 'cc_load_policy': 0,
-                'mute': 1 // Essential: Autoplay won't work on initial load unless muted
+                'start': initialStart,
+                'mute': 1,
+                'enablejsapi': 1,
+                'origin': window.location.origin
             },
             events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
+                'onReady': function(event) {
+                    event.target.playVideo();
+                }
             }
         });
-    }
+    };
 
-    // 2. Initial player ready event
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
-    // 3. Handles random timestamp jump once video starts playing
-    function onPlayerStateChange(event) {
-        if (event.data === YT.PlayerState.PLAYING && !isSeeking) {
-            isSeeking = true; // Block subsequent checks while seeking
-            
-            const duration = player.getDuration();
-            if (duration > 0) {
-                const randomStartTime = getBiasedTimestamp(duration);
-                player.seekTo(randomStartTime, true);
-            }
-        }
-    }
-
-    function getBiasedTimestamp(duration) {
-        let targetTime;
-        if (Math.random() < 0.7) {
-            targetTime = Math.random() * Math.min(30, duration);
-        } else {
-            targetTime = Math.pow(Math.random(), 3) * duration;
-        }
-        return targetTime;
-    }
-
-    // 4. Channel switch button logic
     function changeChannel() {
-        if (player && player.loadVideoById) {
-            isSeeking = false; // Reset seeking state for the next video
+        if (player && typeof player.loadVideoById === 'function') {
+            const nextVideo = getNextVideo();
+            const startSec = getRandomStart();
+
+            // Native API start parameter (bypasses seekTo state loop)
             player.loadVideoById({
-                videoId: getNextVideo()
+                videoId: nextVideo,
+                startSeconds: startSec
             });
+            player.unMute(); // Unmute on explicit button click
         }
     }
 </script>
+
+<!-- API script MUST come AFTER onYouTubeIframeAPIReady is declared -->
+<script src="https://www.youtube.com/iframe_api"></script>
     
     <script src="/scripts/animations.js"></script>
     <script src="/scripts/youtube-music.js"></script>

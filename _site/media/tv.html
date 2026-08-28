@@ -1,6 +1,35 @@
-<iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="pointer-events: none;"></iframe>
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/style_v2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Jersey+10&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+  <script src="https://kit.fontawesome.com/4102574acc.js" crossorigin="anonymous"></script>
+  <title></title>
+</head>
 
-<button onclick="changeChannel()">Next Channel 📺</button>
+  <body>
+        
+    <section id="tv-background">
+    <div id="tv">
+        <iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        <div id="tv-shading"></div>
+
+        <div id="tv-controls">
+            <button onclick="changeChannel()">></button>
+        </div>
+    </div>
+</section>
 
 <script>
   // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
@@ -54,3 +83,17 @@
     // Load a random video on initial page load
     window.onload = changeChannel;
 </script>
+    
+    <script src="/scripts/animations.js"></script>
+    <script src="/scripts/youtube-music.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+      <img id="lightboxImg" class="lightbox__img" alt=""> 
+    </div>
+
+    <script src="/scripts/lightbox.js"></script>
+
+  </body>
+</html>

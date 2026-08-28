@@ -1,6 +1,18 @@
-<iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="pointer-events: none;"></iframe>
+---
+layout: new_default
+---
 
-<button onclick="changeChannel()">Next Channel 📺</button>
+<section id="tv-background">
+    <div id="tv">
+        <iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        <div id="tv-shading"></div>
+
+        <div id="tv-controls">
+            <button onclick="changeChannel()">></button>
+        </div>
+    </div>
+</section>
 
 <script>
   // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)

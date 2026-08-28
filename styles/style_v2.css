@@ -1272,7 +1272,7 @@ mark {
   /* border-bottom: 30px solid var(--paper); */
   outline: 2px solid black;
   outline-offset: -10px;
-  outline-style: groove;
+  /* outline-style: groove; */
   align-items:center;
   display: flex;
   flex-direction: column;

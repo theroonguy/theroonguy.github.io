@@ -14,6 +14,8 @@ layout: new_default
     </div>
 </section>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <script>
   // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
     const originalList = [
@@ -44,23 +46,72 @@ layout: new_default
         "I27kmmpiJl0", // midnight moon
         "MNLtEME8B_c", // electronic labyrinth
     ];
+    
     let deck = [];
+    let player;
 
     function getNextVideo() {
-        // If the deck is empty, re-shuffle a fresh copy of the list
         if (deck.length === 0) {
             deck = [...originalList].sort(() => Math.random() - 0.5);
         }
-        
-        // Pull and return the top video from the shuffled deck
         return deck.pop();
     }
 
+    // 1. YouTube API automatically calls this when ready
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('tv-screen', {
+        videoId: getNextVideo(),
+        playerVars: {
+            'autoplay': 1,
+            'controls': 0,
+            'cc_load_policy': 0
+        },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+        });
+    }
+
+    // 2. Triggers when initial video is loaded
+    function onPlayerReady(event) {
+        jumpToRandomTime();
+    }
+
+    // 3. Triggers when switching videos on channel change
+    function onPlayerStateChange(event) {
+        // When a new video starts playing (state === 1), seek to random timestamp
+        if (event.data === YT.PlayerState.PLAYING && !event.target.hasSeeked) {
+        event.target.hasSeeked = true; // Prevent infinite loop when seekTo triggers play
+        jumpToRandomTime();
+        }
+    }
+
+    function jumpToRandomTime() {
+        const duration = player.getDuration();
+        if (duration > 0) {
+        const randomStartTime = getBiasedTimestamp(duration);
+        player.seekTo(randomStartTime, true);
+        player.playVideo();
+        }
+    }
+
+    function getBiasedTimestamp(duration) {
+        let targetTime;
+        if (Math.random() < 0.7) {
+        targetTime = Math.random() * Math.min(30, duration);
+        } else {
+        targetTime = Math.pow(Math.random(), 3) * duration;
+        }
+        return targetTime;
+    }
+
+    // 4. Call this from your "Next Channel" button
     function changeChannel() {
-        // const randomIndex = Math.floor(Math.random() * videoList.length);
-        const randomVideo = getNextVideo();
-        // Set src with autoplay enabled
-        document.getElementById("tv-screen").src = `https://www.youtube.com/embed/${randomVideo}?autoplay=1&controls=0&cc_load_policy=0`;
+        if (player && player.loadVideoById) {
+        player.hasSeeked = false; // Reset flag for new video
+        player.loadVideoById(getNextVideo());
+        }
     }
 
     // Load a random video on initial page load

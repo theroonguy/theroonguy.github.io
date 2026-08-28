@@ -4,7 +4,7 @@
 
 <script>
   // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
-    const videoList = [
+    const originalList = [
         "Og7S-sk4GVs", // Podcast Host Can't Stop Laughing at Guy's Ticks 
         "ff0J91_ePAw", // chuck mcgill open verse
         "d1DaDiWkYxs", // ai mike
@@ -24,15 +24,30 @@
         "Cqd1Gvq-RBY", // numa numa
         "PIOQWIvdUoM", // vigs
         "I787v-so8fo", // jazzy creep
+        "6FF1p--Zfjw", // so
+        "ctRembqQCcw", // isle unto thyself
+        "W86cTIoMv2U", // smallest cat
+        "9FX34TjJe-c", // carrie and lowell
     ];
+    let deck = [];
+
+    function getNextVideo() {
+        // If the deck is empty, re-shuffle a fresh copy of the list
+        if (deck.length === 0) {
+            deck = [...originalList].sort(() => Math.random() - 0.5);
+        }
+        
+        // Pull and return the top video from the shuffled deck
+        return deck.pop();
+    }
 
     function changeChannel() {
-    const randomIndex = Math.floor(Math.random() * videoList.length);
-    const randomVideo = videoList[randomIndex];
-    // Set src with autoplay enabled
-    document.getElementById("tv-screen").src = `https://www.youtube.com/embed/${randomVideo}?autoplay=1`;
-  }
+        // const randomIndex = Math.floor(Math.random() * videoList.length);
+        const randomVideo = getNextVideo();
+        // Set src with autoplay enabled
+        document.getElementById("tv-screen").src = `https://www.youtube.com/embed/${randomVideo}?autoplay=1&controls=0&cc_load_policy=0`;
+    }
 
-  // Load a random video on initial page load
-  window.onload = changeChannel;
+    // Load a random video on initial page load
+    window.onload = changeChannel;
 </script>

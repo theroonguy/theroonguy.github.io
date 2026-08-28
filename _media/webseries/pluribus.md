@@ -2,5 +2,11 @@
 title: PLURIBUS (2025)
 date: 2026-06-03
 media_type: show
-rating: 4
+rating: 3.5
 ---
+
+it was good. it has the modern tv show pacing that feels slower than it needs to but grabs back your attention every so often with a new interesting scene or montage. it's led to a lot of interesting discussions about autonomy and whatnot, which is cool. but it doesn't really go anywhere.
+
+and this whole cliffhanger style of tv shows---not that it's anything new---has really irked me as of late. now we gotta wait another 3 years to actually get to the main point the season was leading us on by. it just leaves a bit of a bitter taste in my mouth, that's all.
+
+i just don't know how interested i'll be in seeing the second season by the time it comes out.

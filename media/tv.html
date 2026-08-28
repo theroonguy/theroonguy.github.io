@@ -1,0 +1,18 @@
+<iframe id="tv-screen" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<button onclick="changeChannel()">Next Channel 📺</button>
+
+<script>
+  // List of YouTube Video IDs (the string after 'v=' in a YouTube URL)
+  const videoList = ["dQw4w9WgXcQ", "3JZ_D3ELwOQ", "L_LUpnjgPso", "fJ9rUzIMcZQ"];
+
+  function changeChannel() {
+    const randomIndex = Math.floor(Math.random() * videoList.length);
+    const randomVideo = videoList[randomIndex];
+    // Set src with autoplay enabled
+    document.getElementById("tv-screen").src = `https://www.youtube.com/embed/${randomVideo}?autoplay=1`;
+  }
+
+  // Load a random video on initial page load
+  window.onload = changeChannel;
+</script>

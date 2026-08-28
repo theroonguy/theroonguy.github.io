@@ -7,4 +7,4 @@ date_started: 2025-10-19
 rating: 5
 ---
 
-Definitely the best DND campaign I've ever watched.
+definitely the best dnd campaign I've ever watched.

@@ -2,6 +2,12 @@
 media_type: movie
 title: AFTER YANG (2021)
 date: 2026-07-07
-tags: [sci-fi]
+tags: [sci-fi, ai]
 rating: 4
 ---
+
+<div style="padding: 15px; display: flex">
+    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/B6LREI4RBVFMDFGNCBXWBT3ANU.jpg" style="width: 50%; object-fit: cover;">
+
+    <p style="margin-left: 15px">this was a really beautiful, contemplative movie. probably one of my favorites about ai, which is surprising considering how repetitive/cliche stories about ai have gotten. like yes, ai in these worlds can express feelings too, then people can get attached to them, and then realize that they're not special because ai ultimately is a machine. but this movie took a unique take on it that was surprisingly poignant. and my, it had the same artsy, high quality aesthetic that "her" did, which says a lot.</p>
+</div>

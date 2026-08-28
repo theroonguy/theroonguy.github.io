@@ -3,5 +3,13 @@ title: OBSESSION (2026)
 media_type: movie
 tags: [horror]
 date: 2026-06-01
-rating: 5
+rating: 4.5
 ---
+
+yes, i know this is a really popular movie to like. but i was genuinely really surprised by this, since i had zero expectations and had never heard of curry before this. not only did it have one of the thickest, creepiest atmospheres i've seen, it GENUINELY had an substantial message. a lot of horror nowadays (i can't comment on older horror) just seems like a collection of scary concepts rather than a unified story. 
+
+obsession was different. every scene (almost) had a purpose and the characters were genuinely relatable despite being in horror-land. the horror itself was rooted in real emotions and situations that people experience: toxic relationship dynamics, loneliness insecurities, the "nice guy" coverup. it's a type of horror that for once extends beyond the screen and makes you think about your own life and relationships. 
+
+now maybe i'm rating this so high because there's a relatively low bar in horror movies (to my knowledge, i would love to be proven wrong). not _everything_ made sense, like i still don't get why nikki fed bear his cat. nikki could've had a smoother transition into going insane or there could've been a more relatable exploration of why bear's control over her is a Bad Thing without it being because she's going rabid. but after all, it's a horror movie. and for what it's worth, it packed a ton of really creepy scenes into one film and tied them up about as good as you can. 
+
+and god that bedroom corner scene was quite possibly the best horror sequence EVER. curry barker deserves it all.

@@ -27,21 +27,43 @@
         <div id="tv-shading"></div>
 
         <div id="tv-controls">
-            <button onclick="changeChannel()">></button>
+            <button id="restart" onclick="restart()"><<</button>
+            <button id="pause" onclick="pause()">=</button>
+            <button id="play" onclick="play()">></button>
+            <button id="skip" onclick="changeChannel()">>></button>
         </div>
     </div>
 </section>
 
 <script>
     const originalList = [
-        "Og7S-sk4GVs", "ff0J91_ePAw", "d1DaDiWkYxs", "4PUIxEWmsvI", 
-        "5qjnDd1rsII", "E8X4pVVYWn8", "IvUU8joBb1Q", "wO61D9x6lNY", 
-        "9XClfe95mbI", "AqA71cWs1WA", "XPm7zy-X_fI", "JUp9pCtn2BY", 
-        "4mkkIdR4eLk", "5AhZh4A7NLM", "vyDvpwpRPM4", "DPIoje1nfCQ", 
-        "Cqd1Gvq-RBY", "PIOQWIvdUoM", "I787v-so8fo", "6FF1p--Zfjw", 
-        "ctRembqQCcw", "W86cTIoMv2U", "9FX34TjJe-c", "YG8wLT8SFiw", 
-        "I27kmmpiJl0", "MNLtEME8B_c"
-    ];
+        "Og7S-sk4GVs", // Podcast Host Can't Stop Laughing at Guy's Ticks
+        "ff0J91_ePAw", // chuck mcgill open verse
+        "d1DaDiWkYxs", // ai mike
+        "4PUIxEWmsvI", // world of tomorrow
+        "5qjnDd1rsII", // potato war
+        "E8X4pVVYWn8", // dynamo dream ep3
+        "IvUU8joBb1Q", // marble machine
+        "wO61D9x6lNY", // outside in
+        "9XClfe95mbI", // crab battle
+        "AqA71cWs1WA", // hyperbole
+        "XPm7zy-X_fI", // volta
+        "JUp9pCtn2BY", // wilford
+        "4mkkIdR4eLk", // perfect day/something stupid
+        "5AhZh4A7NLM", // i want to die
+        "vyDvpwpRPM4", // world's wierdest animals
+        "DPIoje1nfCQ", // blinker
+        "Cqd1Gvq-RBY", // numa numa
+        "PIOQWIvdUoM", // vigs
+        "I787v-so8fo", // jazzy creep
+        "6FF1p--Zfjw", // so
+        "ctRembqQCcw", // isle unto thyself
+        "W86cTIoMv2U", // smallest cat
+        "9FX34TjJe-c", // carrie and lowell
+        "YG8wLT8SFiw", // mercury
+        "I27kmmpiJl0", // midnight moon
+        "MNLtEME8B_c", // electronic labyrinth
+    ]; 
     
     let deck = [];
     let player;
@@ -99,6 +121,25 @@
                 startSeconds: startSec
             });
             player.unMute(); // Unmute on explicit button click
+        }
+    }
+
+    function pause() {
+        if (player && typeof player.loadVideoById === 'function') {
+            player.pauseVideo();
+        }
+    }
+
+    function play() {
+        if (player && typeof player.loadVideoById === 'function') {
+            player.playVideo();
+        }
+    }
+
+    function restart() {
+        if (player && typeof player.loadVideoById === 'function') {
+            player.seekTo(0);
+            player.playVideo();
         }
     }
 </script>

@@ -1305,16 +1305,11 @@ mark {
   position: relative;
   top: 10px;
   height: 50px;
+  gap: 10px;
 }
 
 #tv-controls button {
-  position: absolute;
-  /* background-color: rgb(241, 38, 31); */
-  background: linear-gradient(
-    -45deg,
-    rgb(31, 182, 241),
-    rgb(152, 68, 235)
-  );
+  /* position: absolute; */
   color: var(--paper);
   font-size: 2rem;
   z-index: 5;
@@ -1325,6 +1320,38 @@ mark {
   width: 100px;
   transition: 0.3s ease;
 }
+
+#tv-controls button#restart {
+  background: linear-gradient(
+    45deg,
+    rgb(31, 182, 241),
+    rgb(152, 68, 235)
+  );
+}  
+
+#tv-controls button#pause {
+  background: linear-gradient(
+    -45deg,
+    rgb(8, 45, 60),
+    rgb(34, 15, 53)
+  );
+}  
+
+#tv-controls button#play {
+  background: linear-gradient(
+    -45deg,
+    rgb(241, 35, 31),
+    rgb(245, 85, 93)
+  );
+}  
+
+#tv-controls button#skip {
+  background: linear-gradient(
+    -45deg,
+    rgb(31, 182, 241),
+    rgb(152, 68, 235)
+  );
+}  
 
 #tv-controls button:hover {
   border-bottom: 5px solid var(--background);

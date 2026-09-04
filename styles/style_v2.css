@@ -1109,10 +1109,7 @@ h1.big_slant {
   border: 3px solid #101010;
   border-radius: 10px;
   padding-right: 20px;
-  /* padding-left: 10px; */
-  /* justify-self: right; */
-  right: -460px;
-  /* top: -20px; */
+  right: max(-460px, -50vw);
   background: linear-gradient(
     to bottom,
     var(--strong-accent-new) 36px,
@@ -1330,6 +1327,7 @@ mark {
 }  
 
 #tv-controls button#pause {
+  width: 50px;
   background: linear-gradient(
     -45deg,
     rgb(8, 45, 60),
@@ -1338,6 +1336,7 @@ mark {
 }  
 
 #tv-controls button#play {
+  width: 50px;
   background: linear-gradient(
     -45deg,
     rgb(241, 35, 31),

@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/journal-feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-03T22:14:55-04:00</updated><id>http://localhost:4000/journal-feed.xml</id><title type="html"> | Journal</title><entry><title type="html">more web dev</title><link href="http://localhost:4000/journal/2026-08-24-more-web-dev" rel="alternate" type="text/html" title="more web dev" /><published>2026-08-24T22:44:00-04:00</published><updated>2026-08-24T22:44:00-04:00</updated><id>http://localhost:4000/journal/more-web-dev</id><content type="html" xml:base="http://localhost:4000/journal/2026-08-24-more-web-dev"><![CDATA[<p>god i love mango juice so much.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/journal-feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-05T01:53:51-04:00</updated><id>http://localhost:4000/journal-feed.xml</id><title type="html"> | Journal</title><entry><title type="html">week 1</title><link href="http://localhost:4000/journal/2026-09-05-week-1" rel="alternate" type="text/html" title="week 1" /><published>2026-09-05T01:29:00-04:00</published><updated>2026-09-05T01:29:00-04:00</updated><id>http://localhost:4000/journal/week-1</id><content type="html" xml:base="http://localhost:4000/journal/2026-09-05-week-1"><![CDATA[<p>things are going really well. life is good.</p>
+
+<p>the first weeks back to school always feel ludicrously slow. getting used to new schedules, unlocking new interiors across campus, meeting old friends again. this one has been no different.</p>
+
+<h2 id="highlights">highlights</h2>
+
+<div class="blog_image right">
+    <img src="/img/journal/stitch.jpg" style="height: 200px; width: 200px; object-fit: cover; object-position: 50% 70%;" />
+</div>
+
+<p>my girlfriend just adopted the best and prettiest cat EVER. his name is stitch and he is already embracing the lap cat life. he is half russian blue and half clumsy.</p>
+
+<p>i’m super excited for my research this semester at the microfluidics lab. i somehow have been given the control over a small CNC lab to clean and organize despite never having touched a CNC before. and i’m set to learn countless new flashy machines and doohickeys to help me make small rubbery straw squares. what a cool job.</p>
+
+<p>i just saw sam o’ nella at his book tour! my friend and i forged our way through a broken metro and hours of line just to get a silly signature and photo with him. i read a part of his book for the first time and it’s beautifully weird. i can’t wait to read the rest.</p>
+
+<p>i met up with one of my friends and attempted to put together a song with some of her old lyrics. most of it was scrapped. many books and assorted items were fondled for foley purposes. it’s fun making music again.</p>
+
+<p>my roommates and i played bad piggies for 2 hours straight today. half a million dollars worth of education and we were still fighting for our lives to beat these levels. though we may have beat a world record.</p>
+
+<h2 id="plans">plans</h2>
+
+<p>a few new books (and other pieces of media) have been added to the list. most of them were from listening to sam o’ nella talk about his inspirations.</p>
+
+<ul>
+  <li>stories of your life and others — ted chiang</li>
+  <li>17776</li>
+  <li>the trial — kafka</li>
+  <li>wheelers</li>
+  <li>titan unveiled</li>
+</ul>]]></content><author><name></name></author><category term="life" /><summary type="html"><![CDATA[things are going really well. life is good.]]></summary></entry><entry><title type="html">more web dev</title><link href="http://localhost:4000/journal/2026-08-24-more-web-dev" rel="alternate" type="text/html" title="more web dev" /><published>2026-08-24T22:44:00-04:00</published><updated>2026-08-24T22:44:00-04:00</updated><id>http://localhost:4000/journal/more-web-dev</id><content type="html" xml:base="http://localhost:4000/journal/2026-08-24-more-web-dev"><![CDATA[<p>god i love mango juice so much.</p>
 
 <p>okay i’ve officially given up on capitalization on these entries.</p>
 

@@ -1,10 +1,18 @@
 /* GLOBAL */
 
 :root {
-    /* --bg-color: #333; */
-    --strong-accent-new: #FD7C36;
-    --paper: #F7F4EA;
-    --background: #19191b;
+  /* Dynamic Geometric Axes */
+  --split-angle: 35deg;
+  --split-center: 50vw;
+  --stripe-width: 80px;
+  --split-shift: 0vw;
+
+  --slope-offset: calc(100vh * tan(var(--split-angle)));
+
+  /* --bg-color: #333; */
+  --strong-accent-new: #FD7C36;
+  --paper: #F7F4EA;
+  --background: #19191b;
 }
 
 html {
@@ -65,32 +73,83 @@ section.new_homepage {
 section.new_homepage #white_bg {
   position: absolute;
   background-color: var(--paper);
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  height: calc(100vh - 30px);
-  
-  clip-path: polygon(0 0, calc(150px + 60vw) 0, calc(-450px + 60vw + (650px - 75vh)) 100%, 0 100%);
+  inset: 15px;
+
+  clip-path: polygon(
+    0 0,
+    calc(var(--split-center) + (var(--slope-offset) / 2) + var(--split-shift)) 0,
+    calc(var(--split-center) - (var(--slope-offset) / 2) + var(--split-shift)) 100%,
+    0 100%
+  );
 
   outline: 1.5px dashed var(--background);
   outline-offset: -7.5px;
+
+  transition: 0.6s ease;
 }
 
 section.new_homepage #orange_stripe {
   position:absolute;
   background-color: var(--strong-accent-new);
-  /* height: 100vh; */
-  height: 80px;
-  transform: 
-    translateX(calc(55vw - 800px))
-    translateY(300px)
-    rotate(-55deg)
-  ;
-  width: 1600px;
-  z-index: 4;
-  /* left: 5vw; */
+  inset: 0;
+  z-index: 14;
+  pointer-events: none;
   
-  /* clip-path: polygon(20% 100%, 70% 0, 80% 0, 30% 100%); */
+  clip-path: polygon(
+    calc(var(--split-center) + (var(--slope-offset) / 2) - (var(--stripe-width) / 2) + var(--split-shift)) 0%,
+    calc(var(--split-center) + (var(--slope-offset) / 2) + (var(--stripe-width) / 2) + var(--split-shift)) 0%,
+    calc(var(--split-center) - (var(--slope-offset) / 2) + (var(--stripe-width) / 2) + var(--split-shift)) 100%,
+    calc(var(--split-center) - (var(--slope-offset) / 2) - (var(--stripe-width) / 2) + var(--split-shift)) 100%
+  );
+
+  transition: 0.6s ease;
+}
+
+section.new_homepage .hover_zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10; 
+  pointer-events: auto;
+  
+
+  transition: 0.6s ease;
+}
+
+#hover_left {
+  left: 0;
+  
+  clip-path: polygon(
+    0 0,
+    calc(var(--split-center) + (var(--slope-offset) / 2) + var(--split-shift) - 50px) 0,
+    calc(var(--split-center) - (var(--slope-offset) / 2) + var(--split-shift) - 50px) 100%,
+    0 100%
+  );
+  width: 100vw;
+}
+
+#hover_right {
+  right: 0;
+  
+  clip-path: polygon(
+    calc(var(--split-center) + (var(--slope-offset) / 2) + var(--split-shift) - 150px) 0,
+    100% 0,
+    100% 100%,
+    calc(var(--split-center) - (var(--slope-offset) / 2) + var(--split-shift) - 150px) 100%
+  );
+  width: 100vw;
+}
+
+section.new_homepage:has(#hover_left:hover) {
+  --split-shift: 6vw;
+  --split-angle: 30deg;
+  --slope-offset: calc(100vh * tan(var(--split-angle)));
+}
+
+section.new_homepage:has(#hover_right:hover) {
+  --split-shift: -6vw;
+  --split-angle: 40deg;
+  --slope-offset: calc(100vh * tan(var(--split-angle)));
 }
 
 section.new_homepage #orange_triangle {
@@ -191,41 +250,25 @@ section.new_homepage #journal h2 {
   font-weight: 100;
 }
 
-/* section.new_homepage #music {
-  position: absolute;
-  background-color: var(--strong-accent-new);
-  font-family: Bruno Ace;
-  padding: 5px 15px;
-  color: var(--paper);
-  border: none;
-  right: 300px;
-  bottom: 260px;
-  transform: perspective(200px) rotateY(-30deg);
-
-  transition: 0.3s ease;
-}
-
-section.new_homepage #music:hover {
-  scale: 1.1;
-  transform: perspective(200px) rotateY(-20deg);
-} */
-
 #orange_stripe_buttons {
   position: absolute;
+  top: 50vh;
+  left: calc(var(--split-center) + var(--split-shift) - (750px / 2) + 4 * var(--stripe-width) / 5);
   transform: 
-    translateX(calc(55vw - 64px))
-    rotate(-55deg)
-    translateX(-500px)
+    /* translate(-50%, -50%) */
+    /* translateX(calc(var(--split-center) + (var(--slope-offset) / 2) + var(--split-shift))) */
+    rotate(calc(var(--split-angle) - 90deg))
+    /* translateX(-50vh) */
   ;
   transform-origin: top;
   display: flex;
   flex-wrap: wrap;
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill, minmax(150px, max-content)); */
-  /* grid-auto-flow: dense; */
   gap: 0;
   width: 700px;
   justify-content: center;
+  z-index: 20;
+
+  transition: 0.6s ease;
 }
 
 section.new_homepage .stripe_button {

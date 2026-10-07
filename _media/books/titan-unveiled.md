@@ -1,6 +1,6 @@
 ---
-media_type: book
-status: in progress
+type: book
+status: todo
 tags: [informative, space]
 title: "TITAN: UNVEILED (2008)"
 ---

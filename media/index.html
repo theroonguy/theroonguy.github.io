@@ -26,7 +26,7 @@ layout: new_default
                 <li>
                     {{ media.title }}
                     <div style="opacity: 0.8; font-size: 0.9rem;">
-                    {{ media.media_type }} - 
+                    {{ media.type }} - 
                     {% for tag in media.tags %}
                         {% if media.tags.first ==  tag %}
                             {{ tag }}
@@ -51,17 +51,21 @@ layout: new_default
 
         {% unless media.status == "in progress" %}
             <details class="media_entry_container">
+                {% if media.status == "draft" %}
+                <summary class="media_entry" style="background-color: rgb(171, 171, 171); pointer-events: none;">
+                {% else %}
                 <summary class="media_entry">
+                {% endif %}
                     <div style="grid-area: icon; text-align: center; align-self: center;">
-                        {% if media.media_type == "movie" %}
+                        {% if media.type == "movie" %}
                             <i class="fa-solid fa-clapperboard"></i>
-                        {% elsif media.media_type == "book" %}
+                        {% elsif media.type == "book" %}
                             <i class="fa-solid fa-book"></i>
-                        {% elsif media.media_type == "concert" %}
+                        {% elsif media.type == "concert" %}
                             <i class="fa-solid fa-ticket"></i>
-                        {% elsif media.media_type == "album" %}
+                        {% elsif media.type == "album" %}
                             <i class="fa-solid fa-compact-disc"></i>
-                        {% elsif media.media_type == "show" %}
+                        {% elsif media.type == "show" %}
                             <i class="fa-solid fa-tv"></i>
                         {% endif%} 
                     </div>
@@ -72,7 +76,7 @@ layout: new_default
                         {% endif %}
                         <br>
                         <div style="font-size: 0.9rem; opacity: 0.8;">
-                        {{ media.media_type }} - 
+                        {{ media.type }} - 
                         {% for tag in media.tags %}
                             {% if media.tags.first ==  tag %}
                                 {{ tag }}

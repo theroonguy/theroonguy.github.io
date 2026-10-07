@@ -1,5 +1,5 @@
 ---
-media_type: album
+type: album
 date: 2026-08-24
 rating: 4.5
 title: "CINEMA3000 (2024)"

@@ -1,7 +1,7 @@
 ---
 title: HADESTOWN (2026)
 rating: 4.5
-media_type: movie
+type: movie
 tags: [musical]
 date: 2026-08-21
 ---

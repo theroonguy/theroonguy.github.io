@@ -1,5 +1,5 @@
 ---
-media_type: movie
+type: movie
 title: DISCLOSURE DAY (2026)
 rating: 1.5
 date: 2026-06-14

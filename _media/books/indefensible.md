@@ -1,5 +1,5 @@
 ---
-media_type: book
+type: book
 title: "INDEFENSIBLE: SEVEN MYTHS THAT SUSTAIN THE GLOBAL ARMS TRADE (2017)"
 status: in progress
 tags: [informative, defense]

@@ -1,0 +1,15 @@
+---
+title: "FILTERS TOUR (2026)"
+date: 2026-10-10
+rating: 5
+type: concert
+tags: [ambient, dream pop]
+---
+
+<img src="/img/music/filters-bayonne.jpg" style="width: 60%; border-radius: 5px; float: left; margin-right: 15px;">
+
+this was genuinely some of the most fun i've ever had at a concert. it really reminded me why i loved his music so much about a year ago, and it gave me a new understanding and appreciation for the emotional depth and deceptively complex nature of his instrumentation. and his live looping and layering was mesmerizing to see. it's honestly very impressive how casually he pulled it off.
+
+i met a couple from paraguay waiting for the doors to open. the man was an environmental engineer who was convinced to finally fly to the states because of this concert. they covered my slider as we exchanged song recommendations and recalled our favorite bayonne songs. he told me his favorite was <i>words</i>. and as we all chanted for an encore, and bayonne returned to play that very song, i never felt so connected with a stranger.
+
+they ended up playing four songs from temporary time, which is what i came for, but i left loving his entire discography.

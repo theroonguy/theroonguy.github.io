@@ -49,7 +49,7 @@ layout: new_default
             {% assign current_month = this_month %}
         {% endif %}
 
-        {% unless media.status == "in progress" %}
+        {% unless media.status == "in progress" or media.status == "todo" %}
             <details class="media_entry_container">
                 {% if media.status == "draft" %}
                 <summary class="media_entry" style="background-color: rgb(171, 171, 171); pointer-events: none;">
